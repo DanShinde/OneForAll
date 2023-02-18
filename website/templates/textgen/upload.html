@@ -1,0 +1,25 @@
+{% extends 'textgen/base.html' %}
+{% block Home%}
+
+
+{%endblock%}
+{% block content%}
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label for "file"> Select IO List:</label>
+  <input type="file" id="file" name="file"><br />
+  <label for "option"> Select Type</label>
+  <select class="form-select" aria-label="Default select example" name="option" >
+      <option value="1">IO Address + Tag </option>
+      <option value="2">Only Tag</option>
+      <option value="3">Only IO Address</option>
+      <option value="4">Only Ferrules</option>
+      <option value="5">IO Address + Ferrules</option>
+  </select>
+  <button class="button submitbtn"> Generate 16</button>
+  <button class="button submitbtn" formaction="/upload8"> Generate 8</button>
+</form>
+
+
+{% endblock%}
