@@ -6,6 +6,7 @@ from django.contrib import messages
 from .funs import create_text_lists, createSCL, read_excel_file, create_text_lists8
 from django.template.context_processors import csrf
 from django.middleware.csrf import get_token
+from django.contrib.auth.decorators import login_required
 
 
 ALLOWED_EXTENSIONS = set(['xlsx'])
@@ -17,8 +18,7 @@ def homeIO(request):
     return render(request, 'textgen/upload.html')
 
 
-
-
+@login_required(login_url="/login")
 def upload(request):
     context = {}
     if request.method == 'POST':

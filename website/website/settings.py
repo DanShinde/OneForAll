@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'crispy_forms',
     'crispy_bootstrap5',
+    'textgen.apps.TextgenConfig',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
