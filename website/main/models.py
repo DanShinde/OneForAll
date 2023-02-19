@@ -8,6 +8,9 @@ class Post(models.Model):
     description = models.TextField()
     created_at  = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
-
+    # class Meta:
+    #     managed = True
+    #     db_table = 'posts'
+        
     def __str__(self):
         return self.title + "\n" + self.description

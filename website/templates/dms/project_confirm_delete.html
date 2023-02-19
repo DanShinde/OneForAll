@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+  <h1>Confirm Delete Project</h1>
+  <p>Are you sure you want to delete the project "{{ object }}"?</p>
+  <form method="post" action="{% url 'dms:project_delete' object.pk %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="{% url 'dms:project_detail' object.pk %}" class="btn btn-secondary">Cancel</a>
+  </form>
+{% endblock %}

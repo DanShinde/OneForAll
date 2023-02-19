@@ -25,10 +25,13 @@ SECRET_KEY = 'django-insecure-_ou75bf)eyxvk0r4t)o7c1&d9)iak*_l=6i^g9no%$^mnr!z9v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['textlists.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
+    # 'textgen.apps.TextgenConfig',
+    # 'dms.apps.DmsConfig', 
+    # 'main.apps.MainConfig',
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,10 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main.apps.MainConfig',
+    'main',
+    'textgen',
+    'dms',
     'crispy_forms',
     'crispy_bootstrap5',
-    'textgen.apps.TextgenConfig',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -81,13 +85,23 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME' : 'TextLists',
+        'USER' : 'admin',
+        'PASSWORD' : 'dbpassword',
+        'HOST' : 'text-db.cwf5vvjbapkd.ap-northeast-1.rds.amazonaws.com',
+        'PORT' : '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
