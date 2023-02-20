@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,6 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['textlists.pythonanywhere.com',    
                 '35.78.64.184',
                 '18.181.207.158',
+                '54.250.195.214',
                 ]
 
 # Application definition
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
     'main',
     'textgen',
     'dms',
+    'planner',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
@@ -138,10 +141,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
 
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "static_root")
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, "static")
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

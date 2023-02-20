@@ -1,0 +1,54 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h1>Task List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task ID</th>
+      <th>Task Name</th>
+      <th>Bucket Name</th>
+      <th>Progress</th>
+      <th>Priority</th>
+      <th>Assigned To</th>
+      <th>Created By</th>
+      <th>Created Date</th>
+      <th>Start Date</th>
+      <th>Due Date</th>
+      <th>Is Recurring</th>
+      <th>Late</th>
+      <th>Completed Date</th>
+      <th>Completed By</th>
+      <th>Completed Checklist Items</th>
+      <th>Checklist Items</th>
+      <th>Labels</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in tasks %}
+    <tr>
+      <td>{{ task.task_id }}</td>
+      <td>{{ task.task_name }}</td>
+      <td>{{ task.bucket_name }}</td>
+      <td>{{ task.progress }}</td>
+      <td>{{ task.priority }}</td>
+      <td>{{ task.assigned_to }}</td>
+      <td>{{ task.created_by }}</td>
+      <td>{{ task.created_date }}</td>
+      <td>{{ task.start_date }}</td>
+      <td>{{ task.due_date }}</td>
+      <td>{{ task.is_recurring }}</td>
+      <td>{{ task.late }}</td>
+      <td>{{ task.completed_date }}</td>
+      <td>{{ task.completed_by }}</td>
+      <td>{{ task.completed_checklist_items }}</td>
+      <td>{{ task.checklist_items }}</td>
+      <td>{{ task.labels }}</td>
+      <td>{{ task.description }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

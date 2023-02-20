@@ -279,3 +279,734 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'clientapi.ipip
 "GET / HTTP/1.1" 302 0
 Bad Request: /http:/clientapi.ipip.net/echo.php
 "GET http://clientapi.ipip.net/echo.php?info=20230219185540 HTTP/1.1" 400 143
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3715
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+"POST / HTTP/1.1" 200 2841
+"POST / HTTP/1.1" 200 2000
+- Broken pipe from ('167.94.146.58', 48698)
+"GET / HTTP/1.1" 302 0
+- Broken pipe from ('167.94.146.58', 60078)
+"GET / HTTP/1.1" 302 0
+code 505, message Invalid HTTP version (2.0)
+"PRI * HTTP/2.0" 505 -
+"GET /login HTTP/1.1" 301 0
+code 505, message Invalid HTTP version (2.0)
+"PRI * HTTP/2.0" 505 -
+"GET /login/ HTTP/1.1" 200 2845
+code 505, message Invalid HTTP version (2.0)
+"PRI * HTTP/2.0" 505 -
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/website/main/views.py", line 21, in home
+    post.delete()
+AttributeError: 'NoneType' object has no attribute 'delete'
+"POST / HTTP/1.1" 500 145
+"GET /home HTTP/1.1" 200 2000
+"GET /upload HTTP/1.1" 200 2787
+"GET /create-post HTTP/1.1" 200 2778
+"GET /home HTTP/1.1" 200 2000
+"GET /upload HTTP/1.1" 200 2787
+"GET /logout HTTP/1.1" 301 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login HTTP/1.1" 301 0
+"GET /login/ HTTP/1.1" 200 2845
+"GET /upload HTTP/1.1" 302 0
+"GET /login?next=/upload HTTP/1.1" 301 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+"GET /sign-up HTTP/1.1" 200 3907
+"GET / HTTP/1.1" 302 0
+"GET /login/?next=/ HTTP/1.1" 200 2845
+"GET / HTTP/1.1" 302 0
+"GET /login/?next=/ HTTP/1.1" 200 2845
+"GET / HTTP/1.1" 302 0
+"GET /login/?next=/ HTTP/1.1" 200 2845
+"GET / HTTP/1.1" 302 0
+"GET /login/?next=/ HTTP/1.1" 200 2845
+"GET / HTTP/1.1" 302 0
+"GET /login/?next=/ HTTP/1.1" 200 2845
+"GET / HTTP/1.1" 302 0
+"GET /login/?next=/ HTTP/1.1" 200 2845
+"POST /login/?next=/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2000
+"GET /upload HTTP/1.1" 200 2787
+"GET / HTTP/1.1" 200 2000
+"GET /upload HTTP/1.1" 200 2787
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 2845
+"GET /upload HTTP/1.1" 302 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+"POST /login/?next=/upload HTTP/1.1" 302 0
+"GET /upload HTTP/1.1" 200 2787
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 2845
+"GET / HTTP/1.1" 302 0
+"GET /login?next=/ HTTP/1.1" 301 0
+"GET /login/?next=/ HTTP/1.1" 200 2845
+"GET /upload HTTP/1.1" 302 0
+"GET /login?next=/upload HTTP/1.1" 301 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+"GET /upload HTTP/1.1" 302 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+"GET /upload HTTP/1.1" 302 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+"GET /create-post HTTP/1.1" 302 0
+"GET /login?next=/create-post HTTP/1.1" 301 0
+"GET /login/?next=/create-post HTTP/1.1" 200 2845
+"GET /home HTTP/1.1" 302 0
+"GET /login?next=/home HTTP/1.1" 301 0
+"GET /login/?next=/home HTTP/1.1" 200 2845
+"GET /upload HTTP/1.1" 302 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+"GET /upload HTTP/1.1" 302 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+"GET /sign-up HTTP/1.1" 200 3907
+"POST /sign-up HTTP/1.1" 200 4114
+"POST /sign-up HTTP/1.1" 302 0
+"GET /home HTTP/1.1" 200 2024
+"GET /home HTTP/1.1" 200 2024
+Forbidden (Permission denied): /create-post
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 78, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+"GET /create-post HTTP/1.1" 403 135
+"GET /upload HTTP/1.1" 200 2811
+"GET /upload HTTP/1.1" 200 2811
+"GET /upload HTTP/1.1" 200 2811
+"GET /upload HTTP/1.1" 200 2811
+"POST /upload HTTP/1.1" 200 18026
+"POST /upload8 HTTP/1.1" 200 18279
+"GET /upload HTTP/1.1" 302 0
+"GET /login/?next=/upload HTTP/1.1" 200 2845
+"POST /login/?next=/upload HTTP/1.1" 302 0
+"GET /upload HTTP/1.1" 200 2787
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+"GET /admin/auth/user/ HTTP/1.1" 200 9585
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/changelists.css
+"GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/jquery.init.js
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/core.js
+"GET /static/admin/js/core.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/actions.js
+"GET /static/admin/js/actions.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/urlify.js
+"GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/prepopulate.js
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/filters.js
+"GET /static/admin/js/filters.js HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/img/icon-no.svg
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+Not Found: /static/admin/img/search.svg
+"GET /static/admin/img/search.svg HTTP/1.1" 404 179
+Not Found: /static/admin/img/icon-yes.svg
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 179
+"GET /admin/auth/user/3/change/ HTTP/1.1" 200 16880
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/forms.css
+"GET /static/admin/css/forms.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/calendar.js
+"GET /static/admin/js/calendar.js HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/jquery.init.js
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/SelectBox.js
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 404 179
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 404 179
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /static/admin/js/SelectFilter2.js
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/core.js
+"GET /static/admin/js/core.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/actions.js
+"GET /static/admin/js/actions.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/urlify.js
+"GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/prepopulate.js
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/prepopulate_init.js
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 404 179
+Not Found: /static/admin/img/icon-addlink.svg
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/change_form.js
+"GET /static/admin/js/change_form.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03õãíoõ>£#')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¬ä#cÒÏá¿\x11äY\x96¬ÂVm\x82')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+"GET / HTTP/1.1" 302 0
+code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03)\x87n\x93)ïØ<\x18\x19U¦º©MÓ¨\x8260')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+code 400, message Bad request version ('À\x14À')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+- Broken pipe from ('172.104.210.105', 39476)
+code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00&!à\x00\x00þÊ\x00Cookie:')
+"  &!à  þÊ Cookie: mstshash=" 400 -
+code 400, message Bad request version ('À\x14À')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Watching for file changes with StatReloader
+"GET /admin/auth/user/3/change/ HTTP/1.1" 200 16880
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/forms.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /static/admin/css/forms.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /static/admin/js/core.js
+Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+Not Found: /static/admin/js/jquery.init.js
+Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+Not Found: /static/admin/js/calendar.js
+"GET /static/admin/js/core.js HTTP/1.1" 404 179
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 404 179
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+"GET /static/admin/js/calendar.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/prepopulate.js
+Not Found: /static/admin/js/actions.js
+Not Found: /static/admin/js/urlify.js
+Not Found: /static/admin/js/SelectFilter2.js
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+"GET /static/admin/js/actions.js HTTP/1.1" 404 179
+"GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 404 179
+"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/SelectBox.js
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+Not Found: /static/admin/js/change_form.js
+Not Found: /static/admin/img/icon-addlink.svg
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/prepopulate_init.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+"GET /static/admin/js/change_form.js HTTP/1.1" 404 179
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 404 179
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 404 179
+"GET /admin/auth/user/3/change/ HTTP/1.1" 200 16880
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dark_mode.css
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/forms.css
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/forms.css HTTP/1.1" 404 179
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /static/admin/js/calendar.js
+Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+"GET /static/admin/js/calendar.js HTTP/1.1" 404 179
+"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/jquery.init.js
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+Not Found: /static/admin/js/core.js
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 404 179
+"GET /static/admin/js/core.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/actions.js
+Not Found: /static/admin/js/SelectBox.js
+Not Found: /static/admin/js/SelectFilter2.js
+"GET /static/admin/js/actions.js HTTP/1.1" 404 179
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 404 179
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/urlify.js
+Not Found: /static/admin/js/prepopulate.js
+Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+"GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/prepopulate_init.js
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Not Found: /static/admin/img/icon-addlink.svg
+Not Found: /static/admin/js/change_form.js
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 404 179
+"GET /static/admin/js/change_form.js HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+"GET / HTTP/1.1" 200 2000
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/dark_mode.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dashboard.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/dark_mode.css
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+"GET / HTTP/1.1" 200 2000
+"GET /upload HTTP/1.1" 200 2787
+"GET /upload HTTP/1.1" 200 2787
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /upload HTTP/1.1" 200 2787
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/dark_mode.css
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Not Found: /admin/css/base.css
+"GET /admin/css/base.css HTTP/1.1" 404 179
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /upload HTTP/1.1" 200 2787
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET / HTTP/1.1" 302 0
+"GET / HTTP/1.1" 302 0
+"GET /login?next=/ HTTP/1.1" 301 0
+Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/http/request.py", line 152, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Bad Request: /http:/api.ipify.org/
+"GET http://api.ipify.org/?format=json HTTP/1.1" 400 143
+Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/http/request.py", line 152, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Bad Request: /www.shadowserver.org:443
+"CONNECT www.shadowserver.org:443 HTTP/1.1" 400 143
+"GET /upload HTTP/1.1" 200 2787
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 2845
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 2218
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/login.css
+"GET /static/admin/css/login.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 2218
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+"GET /admin/auth/user/ HTTP/1.1" 200 9585
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/nav_sidebar.css
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/base.css
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/changelists.css
+"GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+Not Found: /static/admin/js/jquery.init.js
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/core.js
+"GET /static/admin/js/core.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/actions.js
+"GET /static/admin/js/actions.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/urlify.js
+"GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/prepopulate.js
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+Not Found: /static/admin/js/filters.js
+"GET /static/admin/js/filters.js HTTP/1.1" 404 179
+Not Found: /static/admin/img/search.svg
+"GET /static/admin/img/search.svg HTTP/1.1" 404 179
+Not Found: /static/admin/img/icon-no.svg
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+Not Found: /static/admin/css/responsive.css
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+Not Found: /static/admin/img/icon-yes.svg
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 179
+/home/ubuntu/OneForAll/website/planner/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/website/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /upload HTTP/1.1" 200 2787
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+Not Found: /planner
+"GET /planner HTTP/1.1" 404 179
+Not Found: /planner/uploadtask
+"GET /planner/uploadtask HTTP/1.1" 404 179
+"GET /planner/uploadtasks HTTP/1.1" 301 0
+Internal Server Error: /planner/uploadtasks/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/website/planner/views.py", line 23, in upload_excel
+    return render(request, 'excelapp/upload_excel.html', {'form': form})
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: excelapp/upload_excel.html
+"GET /planner/uploadtasks/ HTTP/1.1" 500 145
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /planner/uploadtasks/ HTTP/1.1" 200 2380
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2438
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2475
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2438
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2579
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2579
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2579
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/forms.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2579
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2579
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /planner/
+"GET /planner/ HTTP/1.1" 404 179
+/home/ubuntu/OneForAll/website/planner/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /planner/uploadtasks/ HTTP/1.1" 200 2380
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2579
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2579
+code 400, message Bad request version ('À\x14À')
+You're accessing the development server over HTTPS, but it only supports HTTP.
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2516
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2479
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2516
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /planner/uploadtasks/ HTTP/1.1" 200 2380
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2454
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2489
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2489
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/uploadtasks/ HTTP/1.1" 200 2484
+Watching for file changes with StatReloader
+"GET /upload HTTP/1.1" 200 2787
+"GET /upload HTTP/1.1" 200 2787
+Not Found: /upload/planner
+"GET /upload/planner HTTP/1.1" 404 179
+/home/ubuntu/OneForAll/website/planner/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /upload/planner
+"GET /upload/planner HTTP/1.1" 404 179
+Not Found: /upload/planner
+"GET /upload/planner HTTP/1.1" 404 179
+"GET //planner HTTP/1.1" 301 0
+"GET /planner/ HTTP/1.1" 200 2380
+"POST /planner/ HTTP/1.1" 200 2484
+"POST /planner/ HTTP/1.1" 200 2484
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2516
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2516
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2516
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2454
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2454
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2454
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/planner/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2454
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2454
+/home/ubuntu/OneForAll/website/planner/models.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /planner/ HTTP/1.1" 200 2454
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 200 4177
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dark_mode.css
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+"GET /static/admin/css/base.css HTTP/1.1" 404 179
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/nav_sidebar.js
+"GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+"GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
