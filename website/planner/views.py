@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .forms import ExcelUploadForm, TaskForm
 import pandas as pd
+import numpy as np
 from .models import Task
 from django.db import transaction
 from django.contrib.auth.decorators import login_required, permission_required
@@ -35,15 +36,17 @@ def upload_excel(request):
             excel_file = request.FILES['excel_file']
             try:
                 df = pd.read_excel(excel_file)
-                df['Due Date'] = pd.to_datetime(df['Due Date'], format='%m/%d/%Y').dt.strftime('%Y-%m-%d')
-                df['Created Date'] = pd.to_datetime(df['Created Date'], format='%m/%d/%Y').dt.strftime('%Y-%m-%d')
-                df['Start Date'] = pd.to_datetime(df['Start Date'], format='%m/%d/%Y').dt.strftime('%Y-%m-%d')
-                df['Completed Date'] = pd.to_datetime(df['Completed Date'], format='%m/%d/%Y').dt.strftime('%Y-%m-%d')                
-                #df['Due Date'] = df['Due Date'].apply(lambda x: datetime.strptime(x, '%m/%d/%Y').strftime('%Y-%m-%d'))
-                # df['Created Date'] = pd.to_datetime(df['Created Date'], errors='coerce').dt.strftime('%Y-%m-%d')
-                # df['Start Date'] = pd.to_datetime(df['Start Date'], errors='coerce').dt.strftime('%Y-%m-%d')
-                # df['Completed Date'] = pd.to_datetime(df['Completed Date'], errors='coerce').dt.strftime('%Y-%m-%d')
-                print(df['Due Date'],df['Created Date'],df['Start Date'], df['Completed Date'])
+                df['Created Date'] = pd.to_datetime(df['Created Date'], format='%m/%d/%Y', errors='coerce')
+                df['Start Date'] = pd.to_datetime(df['Start Date'], format='%m/%d/%Y', errors='coerce')
+                df['Due Date'] = pd.to_datetime(df['Due Date'], format='%m/%d/%Y', errors='coerce')
+                df['Completed Date'] = pd.to_datetime(df['Completed Date'], format='%m/%d/%Y', errors='coerce')
+                #print(df['Start Date'])
+                df['Created Date'] = df['Created Date'].fillna(pd.NaT)    
+                df['Start Date'] = df['Start Date'].fillna(pd.NaT)   
+                df['Due Date'] = df['Due Date'].fillna(pd.NaT)   
+                df['Completed Date'] = df['Completed Date'].fillna(pd.NaT)            
+                #print(df['Start Date'])
+                df = df.replace({np.nan: None})
                 validate_excel_data(df)
                 task_list = []
                 for index, row in df.iterrows():
