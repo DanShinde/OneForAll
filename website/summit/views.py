@@ -3,6 +3,9 @@ from .forms import SummitForm
 from .models import SummitData
 from django.views.generic import ListView
 from django.contrib.auth.decorators import login_required
+from django.views.generic.edit import UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 @login_required
 def summit_form(request, summit_id=None):
@@ -27,7 +30,19 @@ def summit_form(request, summit_id=None):
     }
     return render(request, 'summit/form.html', context)
 
-@login_required
-class SummitDataListView(ListView):
+
+class SummitDataListView(LoginRequiredMixin, ListView):
     model = SummitData
     template_name = 'summit/list.html'
+
+
+class SummitDataUpdateView(LoginRequiredMixin, UpdateView):
+    model = SummitData
+    form_class = SummitForm
+    template_name = 'summit/form.html'
+
+
+class SummitDataDeleteView(LoginRequiredMixin, DeleteView):
+    model = SummitData
+    success_url = reverse_lazy('summit-list')
+    template_name = 'summit/confirm_delete.html'

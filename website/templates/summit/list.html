@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+  <h1>Summit Data List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Summit Username</th>
+        <th>Task Name</th>
+        <th>Task Notes</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for summit_data in object_list %}
+        <tr>
+          <td>{{ summit_data.summit_username }}</td>
+          <td>{{ summit_data.task_name }}</td>
+          <td>{{ summit_data.task_notes }}</td>
+          <td>
+            <a href="{% url 'summit-update' summit_data.id %}">Update</a>
+            <form action="{% url 'summit-delete' summit_data.id %}" method="post">
+              {% csrf_token %}
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

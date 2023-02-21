@@ -1,9 +1,10 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-<form method="POST">
+  <h1>Edit Summit Data</h1>
+  <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <button type="submit">Save</button>
   </form>
 {% endblock %}
