@@ -23,4 +23,5 @@ urlpatterns = [
     path('dms/', include('dms.urls')),
     path('', include('django.contrib.auth.urls')),
     path('planner/', include('planner.urls')),
+    path('summit/', include('summit.urls')),
 ]

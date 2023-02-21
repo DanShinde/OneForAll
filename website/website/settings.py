@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'textgen',
     'dms',
     'planner',
+    'summit',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
