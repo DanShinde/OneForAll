@@ -7,6 +7,7 @@ from django.contrib.auth.models import User, Group
 
  
 # Create your views here.
+
 @login_required(login_url="/login")
 def home(request):
     posts = Post.objects.all()

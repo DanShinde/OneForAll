@@ -8,4 +8,5 @@ class SummitForm(forms.ModelForm):
         'project_code', 'summit_username', 'summit_password']
         widgets = {
             'summit_username': forms.TextInput(attrs={'type': 'number'})
+
         }

@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> {% block title %}My Site{% endblock %}</title>
+        {% load static %}
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -26,7 +27,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/upload">TextLists Generation</a>
                     </li>
-                    
+                    {% load user_tags %}
+
+                    {% if request.user|in_group:"timesheet"%}
+                    <li class="nav-item" id = "timesheet-nav">
+                        <a class="nav-link" href="{% url 'summit-list' %}">Summit</a>
+                    </li>
+                    {% endif %}
+
                 </ul>
             </div>
             <div>

@@ -1,7 +1,8 @@
 {% extends 'main/base.html' %}
-
+{% block title %}Summit{% endblock %}
 {% block content %}
   <h1>Summit Data List</h1>
+  <a href="{% url 'summit-form' %}">Add Entry</a>
   <table>
     <thead>
       <tr>
