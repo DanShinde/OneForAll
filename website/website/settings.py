@@ -167,10 +167,18 @@ LOGGING = {
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
+             'formatter': 'custom',
         },
         'file': {
             'class': 'logging.FileHandler',
             'filename': 'myapp.log',
+             'formatter': 'custom',
+        },
+    },
+    'formatters': {
+        'custom': {
+            'format': '%(asctime)s %(levelname)-8s %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
         },
     },
     'loggers': {
@@ -178,7 +186,7 @@ LOGGING = {
             'handlers': ['console', 'file'],
             'level': 'INFO',
         },
-        'myapp': {
+        'summit': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
         },

@@ -2982,3 +2982,79 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
 Watching for file changes with StatReloader
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Scheduler started
+Scheduler stopped
+"GET /upload HTTP/1.1" 200 3005
+"POST /upload HTTP/1.1" 200 26203
+"GET /home HTTP/1.1" 200 2218
+"GET / HTTP/1.0" 302 0
+"GET /summit/list/ HTTP/1.1" 200 2467
+"GET / HTTP/1.0" 302 0
+"GET / HTTP/1.1" 302 0
+"GET /login?next=/ HTTP/1.1" 301 0
+"GET /login/?next=/ HTTP/1.1" 200 2877
+"GET /upload HTTP/1.1" 200 3005
+"GET /summit/list/ HTTP/1.1" 200 2467
+"GET /summit/ HTTP/1.1" 200 3573
+Forbidden (Permission denied): /create-post
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 78, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+"GET /create-post HTTP/1.1" 403 135
+"GET /home HTTP/1.1" 200 2218
+"GET /upload HTTP/1.1" 200 3005
+"GET /summit/list/ HTTP/1.1" 200 2467
+"GET /summit/ HTTP/1.1" 200 3573
+/home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+2023-02-23 07:35:35 INFO     Watching for file changes with StatReloader
+2023-02-23 07:35:37 INFO     Scheduler started
+2023-02-23 07:35:37 INFO     Scheduler stopped
+2023-02-23 07:35:39 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-23 07:38:39 INFO     code 400, message Bad request syntax ('MGLNDD_54.250.195.214_8000')
+2023-02-23 07:38:39 WARNING  "MGLNDD_54.250.195.214_8000" 400 -
+2023-02-23 08:09:39 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-23 08:09:40 INFO     Watching for file changes with StatReloader
+2023-02-23 08:09:42 INFO     Scheduler started
+2023-02-23 08:09:42 INFO     Scheduler stopped
+2023-02-23 08:10:07 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-23 08:10:08 INFO     Watching for file changes with StatReloader
+2023-02-23 08:10:09 INFO     Scheduler started
+2023-02-23 08:10:09 INFO     Scheduler stopped
+2023-02-23 08:10:42 INFO     /home/ubuntu/OneForAll/website/summit/scheduler.py changed, reloading.
+2023-02-23 08:10:43 INFO     Watching for file changes with StatReloader
+2023-02-23 08:10:45 INFO     Scheduler started
+2023-02-23 08:10:45 INFO     Scheduler stopped
+2023-02-23 08:12:14 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-23 08:12:15 INFO     Watching for file changes with StatReloader
+2023-02-23 08:12:16 INFO     Scheduler started
+2023-02-23 08:12:16 INFO     Scheduler stopped
+2023-02-23 08:14:57 INFO     "GET / HTTP/1.1" 302 0
+2023-02-23 08:14:58 INFO     "GET /login?next=/ HTTP/1.1" 301 0
+2023-02-23 08:14:58 INFO     "GET /login/?next=/ HTTP/1.1" 200 2877
+2023-02-23 08:15:02 INFO     "GET /admin/ HTTP/1.1" 302 0
+2023-02-23 08:15:03 INFO     "GET / HTTP/1.1" 302 0
+2023-02-23 08:15:03 INFO     "GET /login?next=/ HTTP/1.1" 301 0
+2023-02-23 08:15:04 INFO     "GET /login/?next=/ HTTP/1.1" 200 2877
+2023-02-23 08:15:15 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-23 08:15:17 INFO     Watching for file changes with StatReloader
+2023-02-23 08:15:18 INFO     Scheduler started
+2023-02-23 08:15:18 INFO     Scheduler stopped
+2023-02-23 08:36:22 INFO     Watching for file changes with StatReloader
+2023-02-23 08:45:15 INFO     Watching for file changes with StatReloader
+2023-02-23 08:45:37 INFO     /home/ubuntu/OneForAll/website/summit/urls.py changed, reloading.
+2023-02-23 08:45:37 INFO     Watching for file changes with StatReloader
+2023-02-23 08:49:07 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-23 08:49:08 INFO     Watching for file changes with StatReloader
+2023-02-23 08:49:34 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-23 08:49:36 INFO     Watching for file changes with StatReloader

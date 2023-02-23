@@ -1,3 +1,4 @@
+import datetime
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -53,7 +54,7 @@ class SummitDataEntry:
         # Get date in DD/MM/YYYY format
         date_today = date.today().strftime("%d/%m/%Y")
         date_field = Select(self.browser.find_element(By.ID, "ContentPlaceHolder1_ddlDate"))
-        date_field.select_by_visible_text(date_today)
+        date_field.select_by_visible_text("22/02/2023")
 
         task_field = Select(self.browser.find_element(By.ID, "ContentPlaceHolder1_ddlType"))
         task_field.select_by_visible_text("Task")
@@ -88,6 +89,25 @@ class SummitDataEntry:
         print("Waiting")
         sleep(10)
         self.browser.quit()
+    
+    def submitForApproval(self):
+        # Get today's date in the format expected by the review page
+        today = "22/02/2023"#date.today().strftime("%d/%m/%Y")
+
+        # Construct the URL for the review page
+        url = f"https://summit.armstrongltd.co.in/Timesheet/ReviewMyDayR.aspx?year={datetime.today().year}&jmonth={datetime.today().month-1}&month={datetime.today().strftime('%m')}&date={today.split('/')[0]}"
+        self.browser.get(url)
+        sleep(2)
+        submit_button = self.browser.find_element(By.ID, "ContentPlaceHolder1_btnSubmitTimesheet")
+        submit_button.click()
+        # Wait for the dialog to appear
+        alert = self.browser.switch_to.alert
+
+        # Accept the dialog
+        alert.accept()
+        sleep(2)
+        self.browser.quit()
+
 
 
 # data = {

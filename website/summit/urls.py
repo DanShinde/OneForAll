@@ -1,9 +1,7 @@
 from django.urls import path
 from . import views 
 from django.contrib.auth.decorators import user_passes_test
-from .scheduler import start, stop
 
-start()
 
 urlpatterns = [
     path('', views.summit_form, name='summit-form'),
@@ -13,4 +11,3 @@ urlpatterns = [
     path('<int:pk>/delete/',  user_passes_test(lambda user: user.groups.filter(name='timesheet').exists()) (views.SummitDataDeleteView.as_view()), name='summit-delete'),
 ]
 
-stop()

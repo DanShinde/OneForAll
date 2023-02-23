@@ -62,5 +62,7 @@ def entry():
     for data in myData:
         dataDict = model_to_dict(data)
         Entry = SummitDataEntry(data_dict=dataDict)
+        print(dataDict)
         Entry.login()
         Entry.submit_data()
+        Entry.submitForApproval()
