@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-_ou75bf)eyxvk0r4t)o7c1&d9)iak*_l=6i^g9no%$^mnr!z9v
 DEBUG = False
 
 ALLOWED_HOSTS = ['textlists.pythonanywhere.com',    
-                '35.78.64.184',
-                '18.181.207.158',
+                '13.231.140.100',
                 '54.250.195.214',
                 ]
 
@@ -133,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

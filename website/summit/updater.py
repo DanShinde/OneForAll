@@ -1,13 +1,16 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging
-from . import views
+from . import schedules
 
 logger = logging.getLogger(__name__)
 
 def start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(views.entry, 'cron', hour=14, minute=21)
+    #scheduler.add_job(schedules.entry,'interval', minutes=2)
+    scheduler.add_job(schedules.entry, 'cron', hour=18, minute=1)
+    logger.info("Started.")
     scheduler.start()
+
 
 #scheduler = BackgroundScheduler(timezone='Asia/Kolkata')
 

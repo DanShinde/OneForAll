@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .summittest import SummitDataEntry
 from django.forms.models import model_to_dict
 
 @user_passes_test(lambda user: user.groups.filter(name='timesheet').exists())
@@ -57,12 +56,3 @@ class SummitDataDeleteView(LoginRequiredMixin, DeleteView):
     def get_success_url(self):
         return self.success_url
 
-def entry():
-    myData = SummitData.objects.all()
-    for data in myData:
-        dataDict = model_to_dict(data)
-        Entry = SummitDataEntry(data_dict=dataDict)
-        print(dataDict)
-        Entry.login()
-        Entry.submit_data()
-        Entry.submitForApproval()

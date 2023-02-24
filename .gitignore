@@ -3,3 +3,5 @@
 /static_cdn
 /website/myapp.log
 *.pyc
+/venv
+**/__pycache__/

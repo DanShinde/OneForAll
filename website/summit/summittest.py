@@ -7,14 +7,17 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from datetime import date 
 from selenium.webdriver.support.select import Select
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class SummitDataEntry:
 
     def __init__(self,  data_dict):
         self.data_dict = data_dict
-        self.username = self.data_dict["username"]
-        self.password = self.data_dict["password"]
+        self.username = self.data_dict["summit_username"]
+        self.password = self.data_dict["summit_password"]
         self.data_dict = data_dict
 
         options = webdriver.ChromeOptions()
@@ -47,6 +50,7 @@ class SummitDataEntry:
 
         except:
             print("[+] Login successful")
+            logger.info(f"Login Successful for {self.username}")
 
     def submit_data(self):
         self.browser.get("https://summit.armstrongltd.co.in/Timesheet/EventEntryR.aspx")
@@ -87,12 +91,13 @@ class SummitDataEntry:
         submit_button.click()
 
         print("Waiting")
+        logger.info("Submit data Successful for {self.username}")
         sleep(10)
         self.browser.quit()
     
     def submitForApproval(self):
         # Get today's date in the format expected by the review page
-        today = "22/02/2023"#date.today().strftime("%d/%m/%Y")
+        today = date.today().strftime("%d/%m/%Y")
 
         # Construct the URL for the review page
         url = f"https://summit.armstrongltd.co.in/Timesheet/ReviewMyDayR.aspx?year={datetime.today().year}&jmonth={datetime.today().month-1}&month={datetime.today().strftime('%m')}&date={today.split('/')[0]}"
@@ -106,6 +111,7 @@ class SummitDataEntry:
         # Accept the dialog
         alert.accept()
         sleep(2)
+        logger.info("Submit for approval Successful for {self.username}")
         self.browser.quit()
 
 
