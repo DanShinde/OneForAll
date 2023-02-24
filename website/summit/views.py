@@ -44,6 +44,7 @@ class SummitDataUpdateView(LoginRequiredMixin, UpdateView):
     model = SummitData
     form_class = SummitForm
     template_name = 'summit/form.html'
+    success_url ="/summit/list/"
 
 class SummitDataDeleteView(LoginRequiredMixin, DeleteView):
     model = SummitData

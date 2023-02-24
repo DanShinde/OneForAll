@@ -61,3 +61,453 @@
 2023-02-24 13:31:26 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
 2023-02-24 13:31:27 INFO     Started.
 2023-02-24 13:31:27 INFO     Watching for file changes with StatReloader
+2023-02-24 13:39:00 INFO     Started.
+2023-02-24 13:39:01 INFO     Started.
+2023-02-24 13:39:01 INFO     Watching for file changes with StatReloader
+2023-02-24 13:39:09 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 13:41:23 INFO     "GET /upload HTTP/1.1" 302 0
+2023-02-24 13:41:23 INFO     "GET /login?next=/upload HTTP/1.1" 301 0
+2023-02-24 13:41:24 INFO     "GET /login/?next=/upload HTTP/1.1" 200 2877
+2023-02-24 13:41:25 WARNING  Not Found: /favicon.ico
+2023-02-24 13:41:25 WARNING  "GET /favicon.ico HTTP/1.1" 404 179
+2023-02-24 13:41:35 INFO     "GET /sign-up HTTP/1.1" 200 3939
+2023-02-24 13:41:48 INFO     "GET /admin HTTP/1.1" 301 0
+2023-02-24 13:41:49 INFO     "GET /admin/ HTTP/1.1" 200 5020
+2023-02-24 13:41:49 INFO     "GET /static/admin/css/base.css HTTP/1.1" 200 20344
+2023-02-24 13:41:49 INFO     "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 796
+2023-02-24 13:41:49 INFO     "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2619
+2023-02-24 13:41:49 INFO     "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+2023-02-24 13:41:49 INFO     "GET /static/admin/css/responsive.css HTTP/1.1" 200 18854
+2023-02-24 13:41:50 INFO     "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2023-02-24 13:41:50 INFO     "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+2023-02-24 13:41:51 INFO     "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2023-02-24 13:41:51 INFO     "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2023-02-24 13:41:51 INFO     "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2023-02-24 13:41:51 INFO     "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2023-02-24 13:41:51 INFO     "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2023-02-24 13:42:02 INFO     "GET /admin/auth/user/ HTTP/1.1" 200 9719
+2023-02-24 13:42:02 INFO     "GET /static/admin/css/changelists.css HTTP/1.1" 200 6395
+2023-02-24 13:42:02 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 13:42:02 INFO     "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2023-02-24 13:42:02 INFO     "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+2023-02-24 13:42:02 INFO     "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+2023-02-24 13:42:02 INFO     "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8985
+2023-02-24 13:42:02 INFO     "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+2023-02-24 13:42:02 INFO     "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+2023-02-24 13:42:03 INFO     "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2023-02-24 13:42:03 INFO     "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 200 125266
+2023-02-24 13:42:03 INFO     "GET /static/admin/js/filters.js HTTP/1.1" 200 966
+2023-02-24 13:42:04 INFO     "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2023-02-24 13:42:04 INFO     "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+2023-02-24 13:42:04 INFO     "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2023-02-24 13:42:04 INFO     "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+2023-02-24 13:42:04 INFO     "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2023-02-24 13:42:17 INFO     "GET /admin/auth/user/?groups__id__exact=2 HTTP/1.1" 200 10022
+2023-02-24 13:42:17 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 13:42:21 INFO     "GET /admin/auth/user/? HTTP/1.1" 200 9719
+2023-02-24 13:42:22 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 13:42:27 INFO     "POST /sign-up HTTP/1.1" 200 4235
+2023-02-24 13:43:05 INFO     "POST /sign-up HTTP/1.1" 200 4110
+2023-02-24 13:43:22 INFO     "POST /sign-up HTTP/1.1" 302 0
+2023-02-24 13:43:23 INFO     "GET /home HTTP/1.1" 200 2034
+2023-02-24 13:43:31 WARNING  Forbidden (Permission denied): /create-post
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 78, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2023-02-24 13:43:31 WARNING  "GET /create-post HTTP/1.1" 403 135
+2023-02-24 13:43:40 INFO     "GET /home HTTP/1.1" 200 2034
+2023-02-24 13:44:00 INFO     "GET /admin/auth/user/? HTTP/1.1" 200 10119
+2023-02-24 13:44:00 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 13:44:04 INFO     "GET /admin/auth/user/4/change/ HTTP/1.1" 200 17954
+2023-02-24 13:44:04 INFO     "GET /static/admin/css/forms.css HTTP/1.1" 200 8944
+2023-02-24 13:44:05 INFO     "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+2023-02-24 13:44:05 INFO     "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4360
+2023-02-24 13:44:05 INFO     "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 11317
+2023-02-24 13:44:05 INFO     "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19379
+2023-02-24 13:44:05 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 13:44:05 INFO     "GET /static/admin/css/widgets.css HTTP/1.1" 200 11297
+2023-02-24 13:44:06 INFO     "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+2023-02-24 13:44:06 INFO     "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2023-02-24 13:44:06 INFO     "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+2023-02-24 13:44:06 INFO     "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2023-02-24 13:44:06 INFO     "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2023-02-24 13:44:06 INFO     "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+2023-02-24 13:44:06 INFO     "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+2023-02-24 13:44:17 INFO     "POST /admin/auth/user/4/change/ HTTP/1.1" 302 0
+2023-02-24 13:44:17 INFO     "GET /admin/auth/user/ HTTP/1.1" 200 10314
+2023-02-24 13:44:18 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 13:44:23 INFO     "GET /home HTTP/1.1" 200 2220
+2023-02-24 13:44:26 INFO     "GET /home HTTP/1.1" 200 2220
+2023-02-24 13:44:31 INFO     "GET /summit/list/ HTTP/1.1" 200 2469
+2023-02-24 13:44:33 INFO     "GET /summit/ HTTP/1.1" 200 3575
+2023-02-24 13:48:07 INFO     "POST /summit/ HTTP/1.1" 302 0
+2023-02-24 13:48:08 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 13:48:25 INFO     "GET /summit/2/update/ HTTP/1.1" 200 3779
+2023-02-24 13:48:32 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+AttributeError: 'SummitData' object has no attribute 'get_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 127, in get_success_url
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.
+2023-02-24 13:48:32 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:48:42 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+AttributeError: 'SummitData' object has no attribute 'get_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 127, in get_success_url
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.
+2023-02-24 13:48:42 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:49:00 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+AttributeError: 'SummitData' object has no attribute 'get_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 127, in get_success_url
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.
+2023-02-24 13:49:00 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:49:59 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+AttributeError: 'SummitData' object has no attribute 'get_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 127, in get_success_url
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.
+2023-02-24 13:49:59 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:50:35 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+AttributeError: 'SummitData' object has no attribute 'get_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 127, in get_success_url
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.
+2023-02-24 13:50:35 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:57:04 INFO     /home/ubuntu/OneForAll/website/summit/models.py changed, reloading.
+2023-02-24 13:57:05 INFO     Started.
+2023-02-24 13:57:05 INFO     Watching for file changes with StatReloader
+2023-02-24 13:57:15 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/home/ubuntu/OneForAll/website/summit/models.py", line 16, in get_absolute_url
+    return reverse('summit-detail', args=[str(self.id)])
+NameError: name 'reverse' is not defined
+2023-02-24 13:57:15 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:57:20 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/home/ubuntu/OneForAll/website/summit/models.py", line 16, in get_absolute_url
+    return reverse('summit-detail', args=[str(self.id)])
+NameError: name 'reverse' is not defined
+2023-02-24 13:57:20 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:58:14 INFO     /home/ubuntu/OneForAll/website/summit/models.py changed, reloading.
+2023-02-24 13:58:14 INFO     Started.
+2023-02-24 13:58:14 INFO     Watching for file changes with StatReloader
+2023-02-24 13:58:33 INFO     "GET /summit/2/update/ HTTP/1.1" 200 3763
+2023-02-24 13:58:36 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/home/ubuntu/OneForAll/website/summit/models.py", line 16, in get_absolute_url
+    return reverse('summit-list', args=[str(self.id)])
+NameError: name 'reverse' is not defined
+2023-02-24 13:58:36 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 13:59:20 INFO     /home/ubuntu/OneForAll/website/summit/models.py changed, reloading.
+2023-02-24 13:59:20 INFO     Started.
+2023-02-24 13:59:20 INFO     Watching for file changes with StatReloader
+2023-02-24 13:59:25 ERROR    Internal Server Error: /summit/2/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/home/ubuntu/OneForAll/website/summit/models.py", line 17, in get_absolute_url
+    return reverse('summit-list', args=[str(self.id)])
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'summit-list' with arguments '('2',)' not found. 1 pattern(s) tried: ['summit/list/\\Z']
+2023-02-24 13:59:25 ERROR    "POST /summit/2/update/ HTTP/1.1" 500 145
+2023-02-24 14:05:10 INFO     Started.
+2023-02-24 14:05:18 INFO     Started.
+2023-02-24 14:05:31 INFO     Started.
+2023-02-24 14:05:32 INFO     Started.
+2023-02-24 14:05:32 INFO     Watching for file changes with StatReloader
+2023-02-24 14:05:40 INFO     "GET / HTTP/1.1" 200 2218
+2023-02-24 14:05:43 INFO     "GET /summit/list/ HTTP/1.1" 200 3035
+2023-02-24 14:05:46 INFO     "GET /summit/1/update/ HTTP/1.1" 200 3776
+2023-02-24 14:06:08 ERROR    Internal Server Error: /summit/1/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/home/ubuntu/OneForAll/website/summit/models.py", line 17, in get_absolute_url
+    return reverse('summit-list', args=[str(self.id)])
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'summit-list' with arguments '('1',)' not found. 1 pattern(s) tried: ['summit/list/\\Z']
+2023-02-24 14:06:08 ERROR    "POST /summit/1/update/ HTTP/1.1" 500 145
+2023-02-24 14:07:37 INFO     "GET / HTTP/1.1" 200 2218
+2023-02-24 14:07:40 INFO     "GET /create-post HTTP/1.1" 200 2996
+2023-02-24 14:07:45 INFO     "POST /create-post HTTP/1.1" 302 0
+2023-02-24 14:07:45 INFO     "GET /home HTTP/1.1" 200 3050
+2023-02-24 14:07:47 INFO     "POST /home HTTP/1.1" 200 2218
+2023-02-24 14:08:21 INFO     "GET /summit/list/ HTTP/1.1" 200 3061
+2023-02-24 14:12:08 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-24 14:12:09 INFO     Started.
+2023-02-24 14:12:09 INFO     Watching for file changes with StatReloader
+2023-02-24 14:12:14 INFO     "GET /summit/1/update/ HTTP/1.1" 200 3802
+2023-02-24 14:12:15 INFO     "POST /summit/1/update/ HTTP/1.1" 302 0
+2023-02-24 14:12:16 INFO     "GET / HTTP/1.1" 200 2218
+2023-02-24 14:12:25 INFO     "GET /summit/list/ HTTP/1.1" 200 3061
+2023-02-24 14:12:27 INFO     "GET /summit/1/update/ HTTP/1.1" 200 3802
+2023-02-24 14:12:34 INFO     "POST /summit/1/update/ HTTP/1.1" 302 0
+2023-02-24 14:12:35 INFO     "GET / HTTP/1.1" 200 2218
+2023-02-24 14:12:38 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 14:12:57 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 14:12:58 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 14:13:12 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-24 14:13:13 INFO     Started.
+2023-02-24 14:13:13 INFO     Watching for file changes with StatReloader
+2023-02-24 14:13:17 INFO     "GET /summit/1/update/ HTTP/1.1" 200 3780
+2023-02-24 14:13:29 INFO     "POST /summit/1/update/ HTTP/1.1" 302 0
+2023-02-24 14:13:30 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 14:13:55 INFO     "POST /summit/2/update/ HTTP/1.1" 302 0
+2023-02-24 14:13:56 INFO     "GET /summit/list/ HTTP/1.1" 200 3023
+2023-02-24 14:14:05 INFO     "GET /summit/2/update/ HTTP/1.1" 200 3763
