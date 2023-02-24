@@ -511,3 +511,93 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'summit-list' with arguments 
 2023-02-24 14:13:55 INFO     "POST /summit/2/update/ HTTP/1.1" 302 0
 2023-02-24 14:13:56 INFO     "GET /summit/list/ HTTP/1.1" 200 3023
 2023-02-24 14:14:05 INFO     "GET /summit/2/update/ HTTP/1.1" 200 3763
+2023-02-24 14:33:01 INFO     "GET / HTTP/1.1" 302 0
+2023-02-24 14:33:34 INFO     "GET / HTTP/1.1" 302 0
+2023-02-24 14:33:34 INFO     "GET /login?next=/ HTTP/1.1" 301 0
+2023-02-24 14:34:03 ERROR    Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/http/request.py", line 152, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+2023-02-24 14:34:03 WARNING  Bad Request: /http:/api.ipify.org/
+2023-02-24 14:34:03 WARNING  "GET http://api.ipify.org/?format=json HTTP/1.1" 400 143
+2023-02-24 14:34:25 ERROR    Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/http/request.py", line 152, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+2023-02-24 14:34:25 WARNING  Bad Request: /www.shadowserver.org:443
+2023-02-24 14:34:25 WARNING  "CONNECT www.shadowserver.org:443 HTTP/1.1" 400 143
+2023-02-24 15:04:54 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 15:04:56 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 15:04:58 INFO     "GET /create-post HTTP/1.1" 200 2996
+2023-02-24 15:04:59 INFO     "GET /home HTTP/1.1" 200 2218
+2023-02-24 15:05:02 INFO     "GET /create-post HTTP/1.1" 200 2996
+2023-02-24 15:05:03 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 15:05:04 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 15:08:36 INFO     /home/ubuntu/OneForAll/website/main/admin.py changed, reloading.
+2023-02-24 15:08:37 INFO     Watching for file changes with StatReloader
+2023-02-24 15:10:04 INFO     /home/ubuntu/OneForAll/website/main/admin.py changed, reloading.
+2023-02-24 15:10:04 INFO     Watching for file changes with StatReloader
+2023-02-24 15:10:23 INFO     /home/ubuntu/OneForAll/website/summit/admin.py changed, reloading.
+2023-02-24 15:10:24 INFO     Started.
+2023-02-24 15:10:24 INFO     Watching for file changes with StatReloader
+2023-02-24 15:10:28 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 15:10:32 INFO     "GET /admin/ HTTP/1.1" 200 6595
+2023-02-24 15:10:32 INFO     "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-02-24 15:10:32 INFO     "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2023-02-24 15:10:32 INFO     "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-02-24 15:10:32 INFO     "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2023-02-24 15:10:32 INFO     "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-02-24 15:10:32 INFO     "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-02-24 15:10:32 INFO     "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-02-24 15:10:33 INFO     "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-02-24 15:10:33 INFO     "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-02-24 15:10:33 INFO     "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2023-02-24 15:10:33 INFO     "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2023-02-24 15:10:33 INFO     "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2023-02-24 15:10:37 INFO     "GET /admin/main/post/ HTTP/1.1" 200 5889
+2023-02-24 15:10:37 INFO     "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2023-02-24 15:10:37 INFO     "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+2023-02-24 15:10:37 INFO     "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2023-02-24 15:10:37 INFO     "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2023-02-24 15:10:37 INFO     "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2023-02-24 15:10:37 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 15:10:38 INFO     "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2023-02-24 15:10:38 INFO     "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2023-02-24 15:10:38 INFO     "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2023-02-24 15:10:38 INFO     "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 304 0
+2023-02-24 15:10:38 INFO     "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+2023-02-24 15:10:38 INFO     "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2023-02-24 15:10:40 INFO     "GET /admin/summit/summitdata/ HTTP/1.1" 200 7345
+2023-02-24 15:10:40 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 15:10:43 INFO     "GET /admin/summit/summitdata/1/change/ HTTP/1.1" 200 11732
+2023-02-24 15:10:43 INFO     "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2023-02-24 15:10:43 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 15:10:44 INFO     "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2023-02-24 15:10:44 INFO     "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2023-02-24 15:10:44 INFO     "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+2023-02-24 15:10:44 INFO     "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2023-02-24 15:10:44 INFO     "GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+2023-02-24 15:10:48 INFO     "GET /admin/summit/summitdata/ HTTP/1.1" 200 7345
+2023-02-24 15:10:48 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 15:10:50 INFO     "GET /admin/summit/summitdata/2/change/ HTTP/1.1" 200 11713
+2023-02-24 15:10:50 INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-02-24 15:11:50 INFO     /home/ubuntu/OneForAll/website/planner/admin.py changed, reloading.
+2023-02-24 15:11:51 INFO     Started.
+2023-02-24 15:11:51 INFO     Watching for file changes with StatReloader
+2023-02-24 15:12:30 INFO     /home/ubuntu/OneForAll/website/dms/admin.py changed, reloading.
+2023-02-24 15:12:31 INFO     Started.
+2023-02-24 15:12:31 INFO     Watching for file changes with StatReloader
