@@ -12,6 +12,7 @@ class SummitData(models.Model):
     summit_username = models.IntegerField(unique=True)
     summit_password = models.CharField(max_length=255)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    weekdays = models.CharField(max_length=255, null=True)
 
     def get_absolute_url(self):
         return reverse('summit-list', args=[str(self.id)])

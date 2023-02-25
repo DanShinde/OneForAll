@@ -19,6 +19,7 @@ class SummitDataEntry:
         self.username = self.data_dict["summit_username"]
         self.password = self.data_dict["summit_password"]
         self.data_dict = data_dict
+        self.stage = 0
 
         options = webdriver.ChromeOptions()
         options.add_argument('--ignore-ssl-errors=yes')
@@ -51,6 +52,7 @@ class SummitDataEntry:
         except:
             print("[+] Login successful")
             logger.info(f"Login Successful for {self.username}")
+            self.stage = 1
 
     def submit_data(self):
         self.browser.get("https://summit.armstrongltd.co.in/Timesheet/EventEntryR.aspx")
@@ -58,7 +60,7 @@ class SummitDataEntry:
         # Get date in DD/MM/YYYY format
         date_today = date.today().strftime("%d/%m/%Y")
         date_field = Select(self.browser.find_element(By.ID, "ContentPlaceHolder1_ddlDate"))
-        date_field.select_by_visible_text("22/02/2023")
+        date_field.select_by_visible_text(date_today)
 
         task_field = Select(self.browser.find_element(By.ID, "ContentPlaceHolder1_ddlType"))
         task_field.select_by_visible_text("Task")
@@ -89,43 +91,36 @@ class SummitDataEntry:
 
         submit_button = self.browser.find_element(By.ID, "btnSaveNewTask")
         submit_button.click()
-
+        sleep(3)
         print("Waiting")
-        logger.info("Submit data Successful for {self.username}")
-        sleep(10)
-        self.browser.quit()
+        alert = self.browser.switch_to.alert
+        print(alert.text)
+        alert.accept()
+        
+        logger.info(f"Submit data Successful for {self.username}")
+        sleep(1)
+        self.stage = 2
+        #self.browser.quit()
     
     def submitForApproval(self):
         # Get today's date in the format expected by the review page
         today = date.today().strftime("%d/%m/%Y")
 
         # Construct the URL for the review page
-        url = f"https://summit.armstrongltd.co.in/Timesheet/ReviewMyDayR.aspx?year={datetime.today().year}&jmonth={datetime.today().month-1}&month={datetime.today().strftime('%m')}&date={today.split('/')[0]}"
+        url = f"https://summit.armstrongltd.co.in/Timesheet/ReviewMyDayR.aspx?year={date.today().year}&jmonth={date.today().month-1}&month={date.today().strftime('%m')}&date={today.split('/')[0]}"
+        logger.info(url)
         self.browser.get(url)
         sleep(2)
         submit_button = self.browser.find_element(By.ID, "ContentPlaceHolder1_btnSubmitTimesheet")
         submit_button.click()
         # Wait for the dialog to appear
+        logger.info(f"Submit button clicked")
         alert = self.browser.switch_to.alert
 
         # Accept the dialog
         alert.accept()
         sleep(2)
-        logger.info("Submit for approval Successful for {self.username}")
+        logger.info(f"Submit for approval Successful for {self.username}")
+        self.stage = 3
+        logger.info(f"stage {self.stage} complete")
         self.browser.quit()
-
-
-
-# data = {
-#     "username": "30196",
-#     "password": "Pravin@123",
-#     "task_name": "Task Name",
-#     "task_notes": "Task details to be given here. A1336 details. It should be at least 50 char. SO I don't know how much is this.",
-#     "city": "Nashik",
-#     "project_code": "A1336"
-# }
-
-# auto = SummitDataEntry(data)
-
-# auto.login()
-# auto.submit_data()

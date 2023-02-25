@@ -103,7 +103,7 @@ DATABASES = {
         'NAME' : 'TextLists',
         'USER' : 'admin',
         'PASSWORD' : 'dbpassword',
-        'HOST' : 'text-db.cwf5vvjbapkd.ap-northeast-1.rds.amazonaws.com',
+        'HOST' : 'oneforall-db.c67acqitubi6.ap-south-1.rds.amazonaws.com',
         'PORT' : '3306',
     }
 }

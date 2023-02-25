@@ -601,3 +601,477 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.shadowserv
 2023-02-24 15:12:30 INFO     /home/ubuntu/OneForAll/website/dms/admin.py changed, reloading.
 2023-02-24 15:12:31 INFO     Started.
 2023-02-24 15:12:31 INFO     Watching for file changes with StatReloader
+2023-02-24 15:13:48 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 15:13:49 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 15:13:52 INFO     "GET /home HTTP/1.1" 200 2218
+2023-02-24 15:13:53 INFO     "GET /create-post HTTP/1.1" 200 2996
+2023-02-24 15:13:53 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 15:13:54 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 16:23:51 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 16:23:54 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 16:23:56 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 16:23:57 INFO     "GET /create-post HTTP/1.1" 200 2996
+2023-02-24 16:23:57 INFO     "GET /home HTTP/1.1" 200 2218
+2023-02-24 16:23:59 INFO     "GET /create-post HTTP/1.1" 200 2996
+2023-02-24 16:24:00 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 16:24:01 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 16:53:43 INFO     code 400, message Bad request syntax ('MGLNDD_13.231.140.100_8000')
+2023-02-24 16:53:43 WARNING  "MGLNDD_13.231.140.100_8000" 400 -
+2023-02-24 16:55:48 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 16:55:52 INFO     "GET / HTTP/1.1" 200 2218
+2023-02-24 16:55:54 INFO     "GET /home HTTP/1.1" 200 2218
+2023-02-24 16:55:58 INFO     "GET / HTTP/1.1" 200 2218
+2023-02-24 17:29:57 INFO     Started.
+2023-02-24 17:29:58 INFO     Started.
+2023-02-24 17:29:58 INFO     Watching for file changes with StatReloader
+2023-02-24 17:30:18 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 17:30:24 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-24 18:01:10 INFO     Login Successful for 30196
+2023-02-24 18:01:10 INFO     Login Successful Entry
+2023-02-24 18:01:10 INFO     Login Successful for 30196
+2023-02-24 18:01:10 INFO     Login Successful Entry
+2023-02-24 18:11:01 INFO     "POST /summit/2/update/ HTTP/1.1" 302 0
+2023-02-24 18:11:02 INFO     "GET /summit/list/ HTTP/1.1" 200 3023
+2023-02-24 18:11:05 INFO     "POST /summit/2/delete/ HTTP/1.1" 302 0
+2023-02-24 18:11:05 INFO     "GET /summit/list/ HTTP/1.1" 200 2469
+2023-02-24 18:11:09 INFO     "GET /logout HTTP/1.1" 301 0
+2023-02-24 18:11:10 INFO     "GET /logout/ HTTP/1.1" 302 0
+2023-02-24 18:11:10 INFO     "GET /login HTTP/1.1" 301 0
+2023-02-24 18:11:10 INFO     "GET /login/ HTTP/1.1" 200 2877
+2023-02-24 18:13:02 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-24 18:13:03 INFO     Started.
+2023-02-24 18:13:03 INFO     Watching for file changes with StatReloader
+2023-02-24 18:13:25 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-24 18:13:26 INFO     Started.
+2023-02-24 18:13:26 INFO     Watching for file changes with StatReloader
+2023-02-24 18:14:21 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 18:15:08 INFO     Login Successful for 30196
+2023-02-24 18:15:08 INFO     Login Successful Entry
+2023-02-24 18:15:26 INFO     Submit data Successful for {self.username}
+2023-02-24 18:15:36 INFO     Submit data Successful Entry
+2023-02-24 18:17:34 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-24 18:17:34 INFO     Started.
+2023-02-24 18:17:34 INFO     Watching for file changes with StatReloader
+2023-02-24 18:17:49 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-24 18:17:50 INFO     Started.
+2023-02-24 18:17:50 INFO     Watching for file changes with StatReloader
+2023-02-24 18:18:32 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 18:19:06 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 18:19:07 INFO     Login Successful for 30196
+2023-02-24 18:19:07 INFO     Login Successful Entry
+2023-02-24 18:19:17 INFO     Submit data Successful for {self.username}
+2023-02-24 18:19:28 INFO     Submit data Successful Entry
+2023-02-24 18:20:33 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-24 18:20:33 INFO     Started.
+2023-02-24 18:20:33 INFO     Watching for file changes with StatReloader
+2023-02-24 18:20:50 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-24 18:20:51 INFO     Started.
+2023-02-24 18:20:51 INFO     Watching for file changes with StatReloader
+2023-02-24 18:21:17 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-24 18:21:17 INFO     Started.
+2023-02-24 18:21:17 INFO     Watching for file changes with StatReloader
+2023-02-24 18:21:36 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 18:22:07 INFO     Login Successful for 30196
+2023-02-24 18:22:07 INFO     Login Successful Entry
+2023-02-24 18:22:17 INFO     Submit data Successful for 30196
+2023-02-24 18:22:27 INFO     Submit data Successful Entry
+2023-02-24 18:22:27 INFO     https://summit.armstrongltd.co.in/Timesheet/ReviewMyDayR.aspx?year=2023&jmonth=1&month=02&date=24
+2023-02-24 18:23:48 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-24 18:23:49 INFO     Started.
+2023-02-24 18:23:49 INFO     Watching for file changes with StatReloader
+2023-02-24 18:24:02 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-24 18:24:02 INFO     Started.
+2023-02-24 18:24:02 INFO     Watching for file changes with StatReloader
+2023-02-24 18:24:30 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-24 18:25:07 INFO     Login Successful for 30196
+2023-02-24 18:25:07 INFO     Login Successful Entry
+2023-02-24 18:25:18 INFO     Submit data Successful for 30196
+2023-02-24 18:25:23 INFO     Submit data Successful Entry
+2023-02-24 18:25:23 INFO     https://summit.armstrongltd.co.in/Timesheet/ReviewMyDayR.aspx?year=2023&jmonth=1&month=02&date=24
+2023-02-24 18:29:01 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-24 18:29:01 INFO     Started.
+2023-02-24 18:29:01 INFO     Watching for file changes with StatReloader
+2023-02-24 18:29:20 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-24 18:29:21 INFO     Started.
+2023-02-24 18:29:21 INFO     Watching for file changes with StatReloader
+2023-02-24 18:31:07 INFO     Login Successful for 30196
+2023-02-24 18:31:07 INFO     Login Successful Entry
+2023-02-24 18:31:17 INFO     Submit data Successful for 30196
+2023-02-24 18:31:22 INFO     Submit data Successful Entry
+2023-02-24 18:31:22 INFO     https://summit.armstrongltd.co.in/Timesheet/ReviewMyDayR.aspx?year=2023&jmonth=1&month=02&date=24
+2023-02-24 20:26:26 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-24 20:26:27 INFO     Started.
+2023-02-24 20:26:27 INFO     Watching for file changes with StatReloader
+2023-02-24 20:27:04 INFO     Started.
+2023-02-24 20:27:04 INFO     Started.
+2023-02-24 20:27:04 INFO     Watching for file changes with StatReloader
+2023-02-25 09:29:22 INFO     /home/ubuntu/OneForAll/website/website/settings.py changed, reloading.
+2023-02-25 09:29:23 INFO     Started.
+2023-02-25 09:29:23 INFO     Watching for file changes with StatReloader
+2023-02-25 09:29:56 INFO     Started.
+2023-02-25 09:29:56 INFO     Started.
+2023-02-25 09:29:56 INFO     Watching for file changes with StatReloader
+2023-02-25 09:34:56 INFO     Started.
+2023-02-25 09:34:57 INFO     Started.
+2023-02-25 09:34:57 INFO     Watching for file changes with StatReloader
+2023-02-25 09:35:43 INFO     Started.
+2023-02-25 09:35:43 INFO     Started.
+2023-02-25 09:35:43 INFO     Watching for file changes with StatReloader
+2023-02-25 09:36:32 INFO     Started.
+2023-02-25 09:36:50 INFO     Started.
+2023-02-25 09:38:31 INFO     Started.
+2023-02-25 09:41:25 INFO     Started.
+2023-02-25 09:43:37 INFO     Started.
+2023-02-25 09:45:48 INFO     Started.
+2023-02-25 09:45:49 INFO     Started.
+2023-02-25 09:45:49 INFO     Watching for file changes with StatReloader
+2023-02-25 10:14:25 INFO     Started.
+2023-02-25 10:14:25 INFO     Started.
+2023-02-25 10:14:25 INFO     Watching for file changes with StatReloader
+2023-02-25 10:16:15 INFO     Started.
+2023-02-25 10:27:29 INFO     Started.
+2023-02-25 10:30:49 INFO     Started.
+2023-02-25 10:31:11 INFO     Started.
+2023-02-25 10:32:03 INFO     Started.
+2023-02-25 11:29:01 INFO     Started.
+2023-02-25 11:29:21 INFO     Started.
+2023-02-25 11:30:04 INFO     Started.
+2023-02-25 11:30:04 INFO     Started.
+2023-02-25 11:30:04 INFO     Watching for file changes with StatReloader
+2023-02-25 11:30:15 INFO     "GET / HTTP/1.1" 200 2218
+2023-02-25 11:30:16 WARNING  Not Found: /favicon.ico
+2023-02-25 11:30:16 WARNING  "GET /favicon.ico HTTP/1.1" 404 179
+2023-02-25 11:30:33 ERROR    Internal Server Error: /summit/list/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'summit_summitdata.weekdays' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/models/query.py", line 376, in __len__
+    self._fetch_all()
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'summit_summitdata.weekdays' in 'field list'")
+2023-02-25 11:30:33 ERROR    "GET /summit/list/ HTTP/1.1" 500 145
+2023-02-25 11:33:45 INFO     Started.
+2023-02-25 11:33:53 INFO     Started.
+2023-02-25 11:36:33 INFO     Started.
+2023-02-25 11:36:44 INFO     Started.
+2023-02-25 11:36:56 INFO     Started.
+2023-02-25 11:39:16 INFO     Started.
+2023-02-25 11:39:28 INFO     Started.
+2023-02-25 11:39:35 INFO     Started.
+2023-02-25 11:41:04 INFO     Started.
+2023-02-25 11:41:20 INFO     Started.
+2023-02-25 11:41:20 INFO     Started.
+2023-02-25 11:41:20 INFO     Watching for file changes with StatReloader
+2023-02-25 11:41:28 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 11:41:33 INFO     "GET /summit/1/update/ HTTP/1.1" 200 4801
+2023-02-25 11:41:43 INFO     "POST /summit/1/update/ HTTP/1.1" 302 0
+2023-02-25 11:41:45 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 11:43:27 INFO     /home/ubuntu/OneForAll/website/summit/forms.py changed, reloading.
+2023-02-25 11:43:27 INFO     Started.
+2023-02-25 11:43:27 INFO     Watching for file changes with StatReloader
+2023-02-25 11:43:45 INFO     /home/ubuntu/OneForAll/website/summit/forms.py changed, reloading.
+2023-02-25 11:43:46 INFO     Started.
+2023-02-25 11:43:46 INFO     Watching for file changes with StatReloader
+2023-02-25 11:45:07 INFO     /home/ubuntu/OneForAll/website/summit/forms.py changed, reloading.
+2023-02-25 11:45:08 INFO     Started.
+2023-02-25 11:45:08 INFO     Watching for file changes with StatReloader
+2023-02-25 11:45:55 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 11:45:55 INFO     Started.
+2023-02-25 11:45:55 INFO     Watching for file changes with StatReloader
+2023-02-25 11:46:02 INFO     "GET /summit/1/update/ HTTP/1.1" 200 4957
+2023-02-25 11:46:35 INFO     /home/ubuntu/OneForAll/website/summit/forms.py changed, reloading.
+2023-02-25 11:46:35 INFO     Started.
+2023-02-25 11:46:35 INFO     Watching for file changes with StatReloader
+2023-02-25 11:46:40 INFO     "GET /summit/1/update/ HTTP/1.1" 200 4801
+2023-02-25 11:46:49 INFO     "POST /summit/1/update/ HTTP/1.1" 302 0
+2023-02-25 11:46:51 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 11:50:09 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 11:50:10 INFO     Started.
+2023-02-25 11:50:10 INFO     Watching for file changes with StatReloader
+2023-02-25 11:50:25 INFO     "GET /summit/1/update/ HTTP/1.1" 200 4801
+2023-02-25 11:50:31 INFO     "POST /summit/1/update/ HTTP/1.1" 302 0
+2023-02-25 11:50:33 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 11:51:33 INFO     "GET /summit/1/update/ HTTP/1.1" 200 4801
+2023-02-25 11:51:41 INFO     "POST /summit/1/update/ HTTP/1.1" 200 4860
+2023-02-25 11:51:49 INFO     "POST /summit/1/update/ HTTP/1.1" 302 0
+2023-02-25 11:51:51 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 11:51:56 INFO     "POST /summit/1/delete/ HTTP/1.1" 302 0
+2023-02-25 11:51:58 INFO     "GET /summit/list/ HTTP/1.1" 200 2467
+2023-02-25 11:52:05 INFO     "GET /summit/ HTTP/1.1" 200 4594
+2023-02-25 11:52:26 ERROR    Internal Server Error: /summit/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/website/summit/views.py", line 19, in summit_form
+    weekdays = form.cleaned_data['weekdays']
+KeyError: 'weekdays'
+2023-02-25 11:52:26 ERROR    "POST /summit/ HTTP/1.1" 500 145
+2023-02-25 11:52:49 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 11:52:50 INFO     Started.
+2023-02-25 11:52:50 INFO     Watching for file changes with StatReloader
+2023-02-25 11:52:59 INFO     "POST /summit/ HTTP/1.1" 302 0
+2023-02-25 11:53:01 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 11:57:33 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 11:57:34 INFO     Watching for file changes with StatReloader
+2023-02-25 11:57:59 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 11:57:59 INFO     Started.
+2023-02-25 11:57:59 INFO     Watching for file changes with StatReloader
+2023-02-25 11:58:28 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-25 11:58:29 INFO     Started.
+2023-02-25 11:58:29 INFO     Watching for file changes with StatReloader
+2023-02-25 11:59:09 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 11:59:27 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:00:44 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 12:00:45 INFO     Started.
+2023-02-25 12:00:45 INFO     Watching for file changes with StatReloader
+2023-02-25 12:00:56 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-25 12:00:56 INFO     Started.
+2023-02-25 12:00:56 INFO     Watching for file changes with StatReloader
+2023-02-25 12:01:38 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 12:01:38 INFO     Started.
+2023-02-25 12:01:38 INFO     Watching for file changes with StatReloader
+2023-02-25 12:01:48 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-25 12:01:49 INFO     Started.
+2023-02-25 12:01:49 INFO     Watching for file changes with StatReloader
+2023-02-25 12:02:25 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-25 12:02:25 INFO     Started.
+2023-02-25 12:02:25 INFO     Watching for file changes with StatReloader
+2023-02-25 12:02:38 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 12:02:39 INFO     Started.
+2023-02-25 12:02:39 INFO     Watching for file changes with StatReloader
+2023-02-25 12:02:49 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-25 12:02:49 INFO     Started.
+2023-02-25 12:02:49 INFO     Watching for file changes with StatReloader
+2023-02-25 12:03:40 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-25 12:03:40 INFO     Started.
+2023-02-25 12:03:40 INFO     Watching for file changes with StatReloader
+2023-02-25 12:03:52 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:03:59 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 12:04:01 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:04:16 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:04:23 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 12:04:26 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:08:01 INFO     "GET / HTTP/1.1" 302 0
+2023-02-25 12:08:01 INFO     "GET /login?next=/ HTTP/1.1" 301 0
+2023-02-25 12:08:11 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 12:08:12 INFO     Started.
+2023-02-25 12:08:12 INFO     Watching for file changes with StatReloader
+2023-02-25 12:08:19 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:08:28 ERROR    Internal Server Error: /summit/3/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/OneForAll/website/summit/views.py", line 62, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+NameError: name 'HttpResponseRedirect' is not defined
+2023-02-25 12:08:28 ERROR    "POST /summit/3/update/ HTTP/1.1" 500 145
+2023-02-25 12:09:40 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 12:09:41 INFO     Started.
+2023-02-25 12:09:41 INFO     Watching for file changes with StatReloader
+2023-02-25 12:09:49 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 12:09:51 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:09:56 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:32:32 INFO     /home/ubuntu/OneForAll/website/summit/forms.py changed, reloading.
+2023-02-25 12:32:32 INFO     Started.
+2023-02-25 12:32:32 INFO     Watching for file changes with StatReloader
+2023-02-25 12:32:46 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:33:13 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 12:33:16 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:33:20 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:34:00 INFO     /home/ubuntu/OneForAll/website/summit/forms.py changed, reloading.
+2023-02-25 12:34:01 INFO     Started.
+2023-02-25 12:34:01 INFO     Watching for file changes with StatReloader
+2023-02-25 12:34:08 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:34:11 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:35:42 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 12:35:43 INFO     Started.
+2023-02-25 12:35:43 INFO     Watching for file changes with StatReloader
+2023-02-25 12:36:13 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:36:17 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:36:40 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 12:36:41 INFO     Started.
+2023-02-25 12:36:41 INFO     Watching for file changes with StatReloader
+2023-02-25 12:36:50 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:36:52 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 12:38:17 INFO     /home/ubuntu/OneForAll/website/summit/forms.py changed, reloading.
+2023-02-25 12:38:18 INFO     Started.
+2023-02-25 12:38:18 INFO     Watching for file changes with StatReloader
+2023-02-25 12:39:34 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 12:39:35 INFO     Started.
+2023-02-25 12:39:35 INFO     Watching for file changes with StatReloader
+2023-02-25 12:39:41 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 12:39:44 ERROR    Internal Server Error: /summit/3/update/
+Traceback (most recent call last):
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 204, in get
+    return super().get(request, *args, **kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/OneForAll/website/summit/views.py", line 71, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 74, in get_context_data
+    kwargs["form"] = self.get_form()
+  File "/home/ubuntu/OneForAll/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 39, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "/home/ubuntu/OneForAll/website/summit/views.py", line 55, in get_form_kwargs
+    kwargs[model] = self.object
+NameError: name 'model' is not defined
+2023-02-25 12:39:44 ERROR    "GET /summit/3/update/ HTTP/1.1" 500 145
+2023-02-25 12:41:05 INFO     /home/ubuntu/OneForAll/website/summit/views.py changed, reloading.
+2023-02-25 12:41:06 INFO     Started.
+2023-02-25 12:41:06 INFO     Watching for file changes with StatReloader
+2023-02-25 14:10:51 INFO     Started.
+2023-02-25 14:10:52 INFO     Started.
+2023-02-25 14:10:52 INFO     Watching for file changes with StatReloader
+2023-02-25 14:10:56 INFO     "GET /upload HTTP/1.1" 200 3005
+2023-02-25 14:11:00 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 14:11:04 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 14:11:12 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 14:11:14 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 14:11:36 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 14:11:44 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 14:11:47 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 14:11:51 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 14:12:00 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 14:12:02 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 14:12:11 INFO     Login Successful for 30196
+2023-02-25 14:12:11 INFO     Login Successful Entry
+2023-02-25 14:13:20 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-25 14:13:22 INFO     Started.
+2023-02-25 14:13:22 INFO     Watching for file changes with StatReloader
+2023-02-25 14:13:29 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 14:13:30 INFO     Started.
+2023-02-25 14:13:30 INFO     Watching for file changes with StatReloader
+2023-02-25 14:13:40 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-25 14:13:41 INFO     Started.
+2023-02-25 14:13:41 INFO     Watching for file changes with StatReloader
+2023-02-25 14:14:09 INFO     Login Successful for 30196
+2023-02-25 14:14:09 INFO     Login Successful Entry
+2023-02-25 14:14:23 INFO     Submit data Successful for 30196
+2023-02-25 14:16:41 INFO     /home/ubuntu/OneForAll/website/summit/updater.py changed, reloading.
+2023-02-25 14:16:42 INFO     Started.
+2023-02-25 14:16:42 INFO     Watching for file changes with StatReloader
+2023-02-25 14:16:57 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 14:16:57 INFO     Started.
+2023-02-25 14:16:57 INFO     Watching for file changes with StatReloader
+2023-02-25 14:17:23 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-25 14:17:24 INFO     Started.
+2023-02-25 14:17:24 INFO     Watching for file changes with StatReloader
+2023-02-25 14:19:36 INFO     /home/ubuntu/OneForAll/website/summit/summittest.py changed, reloading.
+2023-02-25 14:19:37 INFO     Started.
+2023-02-25 14:19:37 INFO     Watching for file changes with StatReloader
+2023-02-25 14:20:04 INFO     /home/ubuntu/OneForAll/website/summit/schedules.py changed, reloading.
+2023-02-25 14:20:04 INFO     Started.
+2023-02-25 14:20:04 INFO     Watching for file changes with StatReloader
+2023-02-25 14:20:12 INFO     "GET /summit/3/update/ HTTP/1.1" 200 4801
+2023-02-25 14:20:20 INFO     "POST /summit/3/update/ HTTP/1.1" 302 0
+2023-02-25 14:20:22 INFO     "GET /summit/list/ HTTP/1.1" 200 3039
+2023-02-25 14:21:11 INFO     "GET /logout HTTP/1.1" 301 0
+2023-02-25 14:21:13 INFO     "GET /logout/ HTTP/1.1" 302 0

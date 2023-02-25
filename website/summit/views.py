@@ -7,6 +7,7 @@ from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.forms.models import model_to_dict
+from django.http import HttpResponseRedirect
 
 @user_passes_test(lambda user: user.groups.filter(name='timesheet').exists())
 @login_required
@@ -16,6 +17,7 @@ def summit_form(request, summit_id=None):
     if form.is_valid():
         summit_data = form.save(commit=False)
         summit_username = form.cleaned_data['summit_username']
+        weekdays = form.cleaned_data['weekday']
         summit_data.user = request.user
         if SummitData.objects.filter(summit_username=summit_username).exclude(id=summit_data.id).exists():
             form.add_error('summit_username', 'This Summit username is already in use')
@@ -25,6 +27,8 @@ def summit_form(request, summit_id=None):
             }
             return render(request, 'summit/form.html', context)
         summit_data.summit_username = summit_username
+        summit_data.weekdays = weekdays
+        print(summit_data.weekdays)
         summit_data.save()
         return redirect('summit-list')
     context = {
@@ -45,6 +49,32 @@ class SummitDataUpdateView(LoginRequiredMixin, UpdateView):
     form_class = SummitForm
     template_name = 'summit/form.html'
     success_url ="/summit/list/"
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['instance'] = self.object
+        return kwargs
+
+    def form_valid(self, form):
+        # Get the instance of the model being edited
+        self.object = form.save(commit=False)
+        
+        # Get the selected weekdays from the form and save them to the model
+        weekdays = self.request.POST.getlist('weekday')
+        self.object.weekdays = weekdays
+
+        # Save the model instance and redirect to the success URL
+        self.object.save()
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.POST:
+            context['form'] = self.form_class(self.request.POST, instance=self.object)
+        else:
+            context['form'] = self.form_class(instance=self.object)
+        return context
+
 
 class SummitDataDeleteView(LoginRequiredMixin, DeleteView):
     model = SummitData
