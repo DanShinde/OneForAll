@@ -1,5 +1,6 @@
 from django import forms
 from .models import SummitData
+from django.core.validators import MinLengthValidator
 
 class SummitForm(forms.ModelForm):
     weekday_choices = (
@@ -337,6 +338,7 @@ class SummitForm(forms.ModelForm):
     weekday = forms.MultipleChoiceField(choices=weekday_choices, widget=forms.CheckboxSelectMultiple)
     city = forms.ChoiceField(choices=CITY_CHOICES)
     medium = forms.ChoiceField(choices=medium_Coices)
+    
     class Meta:
         model = SummitData
         fields = ['task_name', 'task_notes', 'city', 'medium', 
@@ -344,6 +346,10 @@ class SummitForm(forms.ModelForm):
         widgets = {
             'summit_username': forms.TextInput(attrs={'type': 'number'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['task_notes'].validators.append(MinLengthValidator(50))
 
     def get_initial(self):
         initial = super().get_initial()
