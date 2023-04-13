@@ -100,14 +100,24 @@ WSGI_APPLICATION = 'website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME' : 'TextLists',
-        'USER' : 'admin',
+        'NAME' : 'TextLists$default',
+        'USER' : 'TextLists',
         'PASSWORD' : 'dbpassword',
-        'HOST' : 'oneforall-db.c67acqitubi6.ap-south-1.rds.amazonaws.com',
+        'HOST' : 'TextLists.mysql.pythonanywhere-services.com',
         'PORT' : '3306',
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME' : 'TextLists',
+#         'USER' : 'admin',
+#         'PASSWORD' : 'dbpassword',
+#         'HOST' : 'oneforall-db.c67acqitubi6.ap-south-1.rds.amazonaws.com',
+#         'PORT' : '3306',
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
