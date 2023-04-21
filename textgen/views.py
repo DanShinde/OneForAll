@@ -24,7 +24,7 @@ def upload(request):
     if request.method == 'POST':
         file = request.FILES.get('file')
         type = int(request.POST.get('option'))
-        is_Murr = request.POST.get('is_Murr')
+        is_Murr = request.POST.get('is_Murr') == "is_Murr"
         if not file:
             messages.error(request, 'No file was uploaded')
             return render(request, 'textgen/upload.html', context= context)
