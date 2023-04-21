@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+  <h1>Create New Project</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" name="name" required><br>
+    <label for="description">Description:</label>
+    <textarea name="description" rows="4" required></textarea><br>
+    <label for="assigned_to">Assigned to:</label>
+    <select name="assigned_to">
+      {% for user in users %}
+        <option value="{{ user.id }}">{{ user.username }}</option>
+      {% endfor %}
+    </select><br>
+    <input type="submit" value="Create Project">
+  </form>
+{% endblock %}

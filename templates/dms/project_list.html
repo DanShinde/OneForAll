@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+  <h1>Project List</h1>
+  <ul>
+    {% for project in object_list %}
+      <li>
+        <a href="{% url 'dms:project_detail' project.pk %}">{{ project.name }}</a>
+        <a href="{% url 'dms:project_update' project.pk %}" class="btn btn-primary btn-sm">Edit</a>
+        <a href="{% url 'dms:project_delete' project.pk %}" class="btn btn-danger btn-sm">Delete</a>
+      </li>
+    {% empty %}
+      <p>There are no projects to display.</p>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'dms:ProjectCreate' %}" class="btn btn-success">Create Project</a>
+{% endblock %}

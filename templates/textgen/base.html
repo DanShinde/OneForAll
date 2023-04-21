@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}Title{% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/base.css' %}" />
+    <!-- <link rel="shortcut icon" href="{% static 'favicon.ico' %}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      {
+        box-sizing: border-box;
+      }
+      /* Set additional styling options for the columns*/
+      .column {
+        float: left;
+        width: 50%;
+      }
+      .hideme {
+        float: center
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        {% load static %}
+<a href="{% url 'home' %}" class="logo"><img src="{% static 'logo.png' %}" alt="Logo"></a>
+
+        <nav>
+          <ul>
+            <li><a href="{% url 'upload' %}">Text List Generator</a></li>
+            <li><a href="{% url 'io_mapping' %}">IO Mapping Generator</a></li>            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; {{ now.year }} Your Company</p>
+      </div>
+    </footer>
+  </body>
+</html>

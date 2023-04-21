@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+  <h1>{{ project.name }}</h1>
+  <p>{{ project.description }}</p>
+  
+  <h2>Tasks:</h2>
+  {% if project.tasks.all %}
+  <ul>
+    {% for task in tasks %}
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ task.name }}</h5>
+        <p class="card-text">{{ task.description }}</p>
+        {% if task.is_validation_requested %}
+          <p class="text-success">Validation requested</p>
+        {% else %}
+          <form method="POST" action="{% url 'dms:request_validation' task.pk %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Request Validation</button>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+        <li>Validation requested: {{ task.is_validation_requested }}</li>
+        <li>Validation completed: {{ task.is_validation_completed }}</li>
+      </ul>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No tasks assigned to this project yet.</p>
+{% endif %}
+<a href="{% url 'dms:project_update' project.pk %}" class="btn btn-primary">Edit</a>
+<a href="{% url 'dms:project_delete' project.pk %}" class="btn btn-danger">Delete</a>
+{% endblock %}
+
+
