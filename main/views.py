@@ -1,11 +1,39 @@
+from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from .forms import PostForm, RegisterForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required,permission_required
 from .models import Post
 from django.contrib.auth.models import User, Group
+from django.views.decorators.csrf import csrf_exempt
+import git
+import subprocess
 
  
+@csrf_exempt
+def git_update(request):
+    if request.method != "POST":
+        return HttpResponse("Couldn't update the code on PythonAnywhere")
+    '''
+        pass the path of the diectory where your project will be 
+        stored on PythonAnywhere in the git.Repo() as parameter.
+        Here the name of my directory is "test.pythonanywhere.com"
+        '''
+    repo = git.Repo('/home/TextLists/OneForAll')
+    origin = repo.remotes.origin
+    origin.pull()
+    # Run 'collectstatic' command using subprocess
+    cmd = 'python manage.py collectstatic'
+    cmd = 'echo "yes" | python manage.py collectstatic'
+
+    subprocess.run(cmd, shell=True, cwd='/home/TextLists/OneForAll')
+    #
+    cmd = 'python manage.py makemigrations'
+    subprocess.run(cmd, shell=True, cwd='/home/TextLists/OneForAll')
+    #
+    cmd = 'python manage.py migrate'
+    subprocess.run(cmd, shell=True, cwd='/home/TextLists/OneForAll')
+    return HttpResponse("Updated code on PythonAnywhere")
 # Create your views here.
 
 @login_required(login_url="/login")

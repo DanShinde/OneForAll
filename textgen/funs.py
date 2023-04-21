@@ -19,8 +19,7 @@ def read_excel_file(file):
             print(err)
     return data, sheets
 
-
-def create_text_lists(data, text_class, sheet_names):
+def create_text_lists(data, text_class, sheet_names, isMurr=False):
     output = io.BytesIO()
     filename = 'IO+Tag' if text_class == 1 else 'Tag' if text_class == 2 else 'IO' if text_class == 3 else 'Ferrules' if text_class == 4 else 'IO+Ferrules'
     writer = pd.ExcelWriter(output)
@@ -42,16 +41,17 @@ def create_text_lists(data, text_class, sheet_names):
 
         inputs, outputs = collections.defaultdict(list), collections.defaultdict(list)
         for _, row in data[sheet].iterrows():
-            word = row['I/O Address']
-            if "I" in word :
-            # if word[0] == "I":
-                inputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
-            # elif word[0] == "Q":
-            elif( "Q" in word )or ("O" in word):
-                outputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+            if isMurr:
+                inputs[1].append(extract_io_and_tag(row, text_class))
+                outputs[1].append(extract_io_and_tag(row, text_class))
+            else:
+                word = row['I/O Address']
+                if word[0] == "I":
+                    inputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+                elif word[0] == "Q" or word[0] == "O":
+                    outputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
 
         df_inputs, df_outputs = pd.DataFrame(), pd.DataFrame()
-
 
         for i in range(1, int(max(data[sheet]['Channel '])) + 1):
             if inputs:
@@ -72,6 +72,60 @@ def create_text_lists(data, text_class, sheet_names):
     output.seek(0)
     # return the BytesIO object
     return output
+
+
+# def create_text_lists(data, text_class, sheet_names):
+#     output = io.BytesIO()
+#     filename = 'IO+Tag' if text_class == 1 else 'Tag' if text_class == 2 else 'IO' if text_class == 3 else 'Ferrules' if text_class == 4 else 'IO+Ferrules'
+#     writer = pd.ExcelWriter(output)
+#     df_All_Inputs, df_All_Ouputs = pd.DataFrame(), pd.DataFrame()
+#     def extract_io_and_tag(row, text_class):
+#         io_address = row['I/O Address']
+#         if text_class == 1:
+#             return f"{io_address} {row['Tag']}"
+#         elif text_class == 3:
+#             return io_address
+#         elif text_class == 4:
+#             return row['Ferrules']
+#         elif text_class == 5:
+#             return f"{io_address} {row['Ferrules']}"
+#         else:
+#             return row['Tag']
+#     for sheet in sheet_names:
+#         print(f"Creating text lists for sheet {sheet}")
+
+#         inputs, outputs = collections.defaultdict(list), collections.defaultdict(list)
+#         for _, row in data[sheet].iterrows():
+#             word = row['I/O Address']
+#             if "I" in word :
+#             # if word[0] == "I":
+#                 inputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+#             # elif word[0] == "Q":
+#             elif( "Q" in word )or ("O" in word):
+#                 outputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+
+#         df_inputs, df_outputs = pd.DataFrame(), pd.DataFrame()
+
+
+#         for i in range(1, int(max(data[sheet]['Channel '])) + 1):
+#             if inputs:
+#                 df_inputs[i] = pd.DataFrame(inputs[i])
+#             if outputs:
+#                 df_outputs[i] = pd.DataFrame(outputs[i])
+#         df_inputs.to_excel(writer, f"Ins_{sheet}")
+#         df_outputs.to_excel(writer, f"Outs_{sheet}")
+#         df_All_Inputs = pd.concat([df_All_Inputs, df_inputs])
+#         df_All_Ouputs = pd.concat([df_All_Ouputs, df_outputs])
+#         print("Done")
+#     df_All_Inputs = df_All_Inputs.reset_index(drop= True)
+#     df_All_Ouputs = df_All_Ouputs.reset_index(drop= True)
+#     df_All_Inputs.to_excel(writer, f"All_Ins")
+#     df_All_Ouputs.to_excel(writer, f"All_Outs")
+#     writer.close()
+#     # seek to the beginning of the BytesIO object
+#     output.seek(0)
+#     # return the BytesIO object
+#     return output
 
 def create_text_lists8(data, text_class, sheet_names):
     output = io.BytesIO()

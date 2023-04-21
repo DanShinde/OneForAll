@@ -18,3 +18,5 @@ def entry():
             Entry.login()
             Entry.submit_data()
             Entry.submitForApproval()
+
+entry()
