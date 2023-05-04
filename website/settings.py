@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-_ou75bf)eyxvk0r4t)o7c1&d9)iak*_l=6i^g9no%$^mnr!z9v
 DEBUG = False
 
 ALLOWED_HOSTS = ['textlists.pythonanywhere.com',    
-                '13.231.140.100',
-                '54.250.195.214',
+                'localhost'
                 ]
 
 # Application definition
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'summit',
     'crispy_forms',
     'crispy_bootstrap5',
+    'rest_framework',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -90,23 +90,23 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME' : 'TextLists$default',
-        'USER' : 'TextLists',
-        'PASSWORD' : 'dbpassword',
-        'HOST' : 'TextLists.mysql.pythonanywhere-services.com',
-        'PORT' : '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME' : 'TextLists$default',
+#         'USER' : 'TextLists',
+#         'PASSWORD' : 'dbpassword',
+#         'HOST' : 'TextLists.mysql.pythonanywhere-services.com',
+#         'PORT' : '3306',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {

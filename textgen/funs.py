@@ -54,6 +54,7 @@ def create_text_lists(data, text_class, sheet_names, isMurr=False):
         df_inputs, df_outputs = pd.DataFrame(), pd.DataFrame()
 
         for i in range(1, int(max(data[sheet]['Channel '])) + 1):
+            print(i, inputs[i])
             if inputs:
                 df_inputs[i] = pd.DataFrame(inputs[i])
             if outputs:

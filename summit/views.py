@@ -87,3 +87,17 @@ class SummitDataDeleteView(LoginRequiredMixin, DeleteView):
     def get_success_url(self):
         return self.success_url
 
+
+from rest_framework import generics, permissions
+from .models import SummitData
+from .serializers import SummitDataSerializer
+
+class SummitDataList(generics.ListCreateAPIView):
+    queryset = SummitData.objects.all()
+    serializer_class = SummitDataSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+class SummitDataDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = SummitData.objects.all()
+    serializer_class = SummitDataSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
