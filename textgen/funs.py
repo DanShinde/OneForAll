@@ -10,7 +10,7 @@ def read_excel_file(file):
     sheets = []
     for sheet_name in raw.sheet_names:
         sheet = raw.parse(sheet_name)
-        if 'Tag' in sheet.columns and 'Channel ' in sheet.columns and 'I/O Address' in sheet.columns:
+        if 'Tag' in sheet.columns and 'Channel' in sheet.columns and 'I/O Address' in sheet.columns:
             sheet = sheet.dropna(subset=['Tag'])
             data[sheet_name] = sheet
             sheets.append(sheet_name)
@@ -42,18 +42,18 @@ def create_text_lists(data, text_class, sheet_names, isMurr=False):
         inputs, outputs = collections.defaultdict(list), collections.defaultdict(list)
         for _, row in data[sheet].iterrows():
             if isMurr:
-                inputs[1].append(extract_io_and_tag(row, text_class))
-                outputs[1].append(extract_io_and_tag(row, text_class))
+                inputs[row['Channel']].append(extract_io_and_tag(row, text_class))
+                #outputs[1].append(extract_io_and_tag(row, text_class))
             else:
                 word = row['I/O Address']
                 if word[0] == "I":
-                    inputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+                    inputs[row['Channel']].append(extract_io_and_tag(row, text_class))
                 elif word[0] == "Q" or word[0] == "O":
-                    outputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+                    outputs[row['Channel']].append(extract_io_and_tag(row, text_class))
 
         df_inputs, df_outputs = pd.DataFrame(), pd.DataFrame()
 
-        for i in range(1, int(max(data[sheet]['Channel '])) + 1):
+        for i in range(1, int(max(data[sheet]['Channel'])) + 1):
             print(i, inputs[i])
             if inputs:
                 df_inputs[i] = pd.DataFrame(inputs[i])
@@ -100,15 +100,15 @@ def create_text_lists(data, text_class, sheet_names, isMurr=False):
 #             word = row['I/O Address']
 #             if "I" in word :
 #             # if word[0] == "I":
-#                 inputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+#                 inputs[row['Channel']].append(extract_io_and_tag(row, text_class))
 #             # elif word[0] == "Q":
 #             elif( "Q" in word )or ("O" in word):
-#                 outputs[row['Channel ']].append(extract_io_and_tag(row, text_class))
+#                 outputs[row['Channel']].append(extract_io_and_tag(row, text_class))
 
 #         df_inputs, df_outputs = pd.DataFrame(), pd.DataFrame()
 
 
-#         for i in range(1, int(max(data[sheet]['Channel '])) + 1):
+#         for i in range(1, int(max(data[sheet]['Channel'])) + 1):
 #             if inputs:
 #                 df_inputs[i] = pd.DataFrame(inputs[i])
 #             if outputs:
@@ -153,15 +153,15 @@ def create_text_lists8(data, text_class, sheet_names):
             word = row['I/O Address']
             if "I" in word :
             # if word[0] == "I":
-                inputs[((row['Channel ']- 1) % 8) + 1].append(extract_io_and_tag(row, text_class))
+                inputs[((row['Channel']- 1) % 8) + 1].append(extract_io_and_tag(row, text_class))
             # elif word[0] == "Q":
             elif( "Q" in word )or ("O" in word):
-                outputs[((row['Channel ']- 1) % 8) + 1].append(extract_io_and_tag(row, text_class))
+                outputs[((row['Channel']- 1) % 8) + 1].append(extract_io_and_tag(row, text_class))
 
         df_inputs, df_outputs = pd.DataFrame(), pd.DataFrame()
 
         print(inputs)
-        for i in range(1, 9): #int(max(data[sheet]['Channel '])) + 1):
+        for i in range(1, 9): #int(max(data[sheet]['Channel'])) + 1):
             if inputs:
                 df_inputs[i] = pd.DataFrame(inputs[i])
             if outputs:
