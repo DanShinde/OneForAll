@@ -4,12 +4,12 @@
 
 {%endblock%}
 {% block content%}
-    <form method="post" enctype="multipart/form-data" action="/api/import-xml/">
+    <form method="post" enctype="multipart/form-data" action="/textgen/import-xml/">
         {% csrf_token %}
         <input type="file" name="file">
         <button type="submit">Upload XML</button>
     </form>   
-    <form method="post" enctype="multipart/form-data" action="/api/import-excel/">
+    <form method="post" enctype="multipart/form-data" action="/textgen/import-excel/">
         {% csrf_token %}
         <input type="file" name="file">
         <button type="submit">Upload Excel</button>
