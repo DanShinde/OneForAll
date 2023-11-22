@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% block Home%}
+
+
+{%endblock%}
+{% block content%}
+    <form method="post" enctype="multipart/form-data" action="/api/import-xml/">
+        {% csrf_token %}
+        <input type="file" name="file">
+        <button type="submit">Upload XML</button>
+    </form>   
+    <form method="post" enctype="multipart/form-data" action="/api/import-excel/">
+        {% csrf_token %}
+        <input type="file" name="file">
+        <button type="submit">Upload Excel</button>
+    </form>    
+    <!-- <button hx-delete='{% url "import-excel"%}' hx-target="#Status" hx-headers="{ 'X-CSRFToken': '{{ csrf_token }}' }">
+        Delete Residue
+      </button> -->
+    <div class="Status" id="Status">
+        <ul>There is nothing here</ul>
+    </div>
+
+    {% endblock%}

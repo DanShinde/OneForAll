@@ -4,12 +4,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
 from .funs import create_text_lists, createSCL, read_excel_file, create_text_lists8
+from .funs import export_to_xml, process_data
 from django.template.context_processors import csrf
 from django.middleware.csrf import get_token
 from django.contrib.auth.decorators import login_required
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import AlarmSerializer
 
-
-ALLOWED_EXTENSIONS = set(['xlsx'])
+ALLOWED_EXTENSIONS = {'xlsx'}
+# ALLOWED_EXTENSIONS = set(['xlsx'])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -85,3 +89,39 @@ def io_mapping(request):
 def server_error(request):
     message = "An error has occurred"
     return render(request, 'textgen/Error.html', {'error': message})
+
+
+class ExcelImportView(APIView):
+    def post(self, request):
+        file = request.FILES['file']
+        df = pd.read_excel(file)
+        # print(df)
+        serializer = AlarmSerializer(data=df.to_dict('records'), many=True)
+        # print(df.to_dict('records'))
+        if serializer.is_valid():
+            export_response  = export_to_xml(df)
+            # serializer.save()
+            
+            return export_response  #Response({"message": "Data imported successfully"})
+        else:
+            return Response(serializer.errors, status=400)
+    
+    def get(self, request):
+        context = {'Header' : 'Hello'}
+        return render(request, 'textgen/rockwellAlarms.html', context=context)
+    
+    def delete(self, request, format=None):
+        # event = Alarm.objects.all()
+        # event.delete()
+        # return Response("Data Deleted")
+        response_data = {"message": "Data deleted successfully"}
+        
+        # Return JSON response
+        return HttpResponse(content_type='application/json', status=200, content=response_data)
+        
+class XMLImportView(APIView):
+    def post(self, request):
+        file = request.FILES['file']
+        export_response = process_data(file)
+        return export_response 
+

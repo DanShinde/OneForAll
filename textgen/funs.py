@@ -1,6 +1,8 @@
 import collections
 import io
 import os
+from django.http import HttpResponse
+
 import pandas as pd
 
 def read_excel_file(file):
@@ -36,6 +38,7 @@ def create_text_lists(data, text_class, sheet_names, isMurr=False):
             return f"{io_address} {row['Ferrules']}"
         else:
             return row['Tag']
+
     for sheet in sheet_names:
         print(f"Creating text lists for sheet {sheet}")
 
@@ -66,8 +69,8 @@ def create_text_lists(data, text_class, sheet_names, isMurr=False):
         print("Done")
     df_All_Inputs = df_All_Inputs.reset_index(drop= True)
     df_All_Ouputs = df_All_Ouputs.reset_index(drop= True)
-    df_All_Inputs.to_excel(writer, f"All_Ins")
-    df_All_Ouputs.to_excel(writer, f"All_Outs")
+    df_All_Inputs.to_excel(writer, "All_Ins")
+    df_All_Ouputs.to_excel(writer, "All_Outs")
     writer.close()
     # seek to the beginning of the BytesIO object
     output.seek(0)
@@ -145,6 +148,7 @@ def create_text_lists8(data, text_class, sheet_names):
             return f"{io_address} {row['Ferrules']}"
         else:
             return row['Tag']
+
     for sheet in sheet_names:
         print(f"Creating text lists for sheet {sheet}")
 
@@ -173,8 +177,8 @@ def create_text_lists8(data, text_class, sheet_names):
         print("Done")
     df_All_Inputs = df_All_Inputs.reset_index(drop= True)
     df_All_Ouputs = df_All_Ouputs.reset_index(drop= True)
-    df_All_Inputs.to_excel(writer, f"All_Ins")
-    df_All_Ouputs.to_excel(writer, f"All_Outs")
+    df_All_Inputs.to_excel(writer, "All_Ins")
+    df_All_Ouputs.to_excel(writer, "All_Outs")
     writer.close()
     # seek to the beginning of the BytesIO object
     output.seek(0)
@@ -239,6 +243,95 @@ END_IF;
                  count := 1,
                  ENO => ENO);
 """
-    SCL = io.BytesIO(bytes(text, 'utf-8')
-  )
-    return SCL
+    return io.BytesIO(bytes(text, 'utf-8'))
+
+
+xml_Header = """<?xml version="1.0" encoding="UTF-8"?>
+<alarms version="1.0" product="{E44CB020-C21D-11D3-8A3F-0010A4EF3494}" id="Alarms">
+    <alarm history-size="500" capacity-high-warning="90" capacity-high-high-warning="99" display-name="[ALARM]" hold-time="250" max-update-rate="1.00" embedded-server-update-rate="1.00" silence-tag="" remote-silence-exp="" remote-ack-all-exp="" status-reset-tag="" remote-status-reset-exp="" close-display-tag="" remote-close-display-exp="" use-alarm-identifier="false" capacity-high-warning-tag="" capacity-high-high-warning-tag="" capacity-overrun-tag="" remote-clear-history-exp="">
+     """
+xml_Footer = 	"""</alarm>
+</alarms>
+"""
+
+
+def export_to_xml(df):
+    # Create an XML-like string from the DataFrame
+    triggers_str = "<triggers>\n"
+    messages_str = "<messages>\n"
+
+    for _, row in df.iterrows():
+        triggers_str += f'    <trigger id="{row["triggerID"]}" type="value" ack-all-value="0" use-ack-all="false" ack-tag="" exp="{{{row["trigger"]}}}" message-tag="" message-handshake-exp="" message-notification-tag="" remote-ack-exp="" remote-ack-handshake-tag="" label="" handshake-tag=""/>\n'
+
+        messages_str += f'    <message id="{row["messageID"]}" trigger-value="1" identifier="1" trigger="#{row["triggerID"]}" backcolor="#800000" forecolor="#FFFFFF" audio="false" display="true" print="false" message-to-tag="false" text="{row["message"]}"/>\n'
+
+    triggers_str += "</triggers>"
+    messages_str += "</messages>"
+
+    # Combine the XML strings
+    xml_content = xml_Header + '\n' + triggers_str + '\n' + messages_str + '\n' + xml_Footer
+
+    # Return XML content as response
+    response = HttpResponse(xml_content, content_type='application/xml')
+    response['Content-Disposition'] = 'attachment; filename="exported_data.xml"'
+
+    return response
+
+
+
+    
+
+
+def process_data(file):
+    # sourcery skip: extract-duplicate-method, inline-immediately-returned-variable
+
+    # Read the XML-like text file into a DataFrame
+    content = file.read().decode('utf-8')
+
+    # Parse the text content to extract data
+    triggers_start = content.find("<triggers>")
+    triggers_end = content.find("</triggers>")
+    triggers_text = content[triggers_start:triggers_end + len("</triggers>")]
+
+    messages_start = content.find("<messages>")
+    messages_end = content.find("</messages>")
+    messages_text = content[messages_start:messages_end + len("</messages>")]
+
+    triggers_data = {}
+
+
+    for line in triggers_text.split('\n'):
+        if 'trigger id' in line:
+            triggerID = line.split('trigger id="')[1].split('"')[0]
+            exp = line.split('exp="{')[1].split('}"')[0]
+            triggers_data[triggerID] = {'triggerID': triggerID, 'trigger': exp}
+
+    for line in messages_text.split('\n'):
+        if 'message id' in line:
+            message_id = line.split('message id="')[1].split('"')[0]
+            triggerID = line.split('trigger="#')[1].split('"')[0]
+            text = line.split('text="')[1].split('"')[0]
+            triggers_data[triggerID]['messageID'] = message_id
+            triggers_data[triggerID]['message'] = text
+
+    triggers_df = pd.DataFrame(triggers_data)
+    print(triggers_df)
+    triggers_df = triggers_df.transpose()
+    print(triggers_df)
+
+    # Create Excel content in memory
+    excel_buffer = io.BytesIO()
+    with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
+        triggers_df.to_excel(writer, sheet_name='Triggers', index=False)
+
+    excel_buffer.seek(0)
+
+    # Set response headers
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = 'attachment; filename=output.xlsx'
+
+    # Write Excel content to the response
+    response.write(excel_buffer.read())
+
+    return response
+
