@@ -46,9 +46,9 @@ def create_text_lists(data, text_class, sheet_names, isMurr=False):
                 #outputs[1].append(extract_io_and_tag(row, text_class))
             else:
                 word = row['I/O Address']
-                if word[0] == "I":
+                if "I" in word or 'X' in word:
                     inputs[row['Channel']].append(extract_io_and_tag(row, text_class))
-                elif word[0] == "Q" or word[0] == "O":
+                elif "Q" in word or "O" in word or 'Y' in word:
                     outputs[row['Channel']].append(extract_io_and_tag(row, text_class))
 
         df_inputs, df_outputs = pd.DataFrame(), pd.DataFrame()
