@@ -261,7 +261,8 @@ def export_to_xml(df):
     messages_str = "<messages>\n"
 
     for _, row in df.iterrows():
-        triggers_str += f'    <trigger id="{row["triggerID"]}" type="value" ack-all-value="0" use-ack-all="false" ack-tag="" exp="{{{row["trigger"]}}}" message-tag="" message-handshake-exp="" message-notification-tag="" remote-ack-exp="" remote-ack-handshake-tag="" label="" handshake-tag=""/>\n'
+        ack = f'{{row["ack"]}}' if row["ack"] != 1 else ''
+        triggers_str += f'    <trigger id="{row["triggerID"]}" type="value" ack-all-value="0" use-ack-all="false" ack-tag="" exp="{{{row["trigger"]}}}" message-tag="" message-handshake-exp="" message-notification-tag="" remote-ack-exp="{ack}" remote-ack-handshake-tag="" label="" handshake-tag=""/>\n'
 
         messages_str += f'    <message id="{row["messageID"]}" trigger-value="1" identifier="1" trigger="#{row["triggerID"]}" backcolor="#800000" forecolor="#FFFFFF" audio="false" display="true" print="false" message-to-tag="false" text="{row["message"]}"/>\n'
 
@@ -304,7 +305,11 @@ def process_data(file):
         if 'trigger id' in line:
             triggerID = line.split('trigger id="')[1].split('"')[0]
             exp = line.split('exp="{')[1].split('}"')[0]
-            triggers_data[triggerID] = {'triggerID': triggerID, 'trigger': exp}
+            try:
+                ack = line.split('remote-ack-exp="{')[1].split('}"')[0]
+            except:
+                ack = 1
+            triggers_data[triggerID] = {'triggerID': triggerID, 'trigger': exp, 'ack': ack}
 
     for line in messages_text.split('\n'):
         if 'message id' in line:

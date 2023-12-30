@@ -6,4 +6,5 @@ class Alarm(models.Model):
     messageID = models.CharField(max_length=10)
     trigger = models.CharField(max_length=100)
     message = models.CharField(max_length=100)
+    ack = models.CharField(max_length = 100)
 
