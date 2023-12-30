@@ -99,10 +99,7 @@ class ExcelImportView(APIView):
         serializer = AlarmSerializer(data=df.to_dict('records'), many=True)
         # print(df.to_dict('records'))
         if serializer.is_valid():
-            export_response  = export_to_xml(df)
-            # serializer.save()
-            
-            return export_response  #Response({"message": "Data imported successfully"})
+            return export_to_xml(df)
         else:
             return Response(serializer.errors, status=400)
     
@@ -122,6 +119,5 @@ class ExcelImportView(APIView):
 class XMLImportView(APIView):
     def post(self, request):
         file = request.FILES['file']
-        export_response = process_data(file)
-        return export_response 
+        return process_data(file) 
 
