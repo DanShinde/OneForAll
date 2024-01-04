@@ -261,7 +261,8 @@ def export_to_xml(df):
     messages_str = "<messages>\n"
 
     for _, row in df.iterrows():
-        ack = f'{{row["ack"]}}' if row["ack"] != 1 else ''
+        ack = f'{{{row["ack"]}}}' if row["ack"] != 1 else ''
+        print(ack)
         triggers_str += f'    <trigger id="{row["triggerID"]}" type="value" ack-all-value="0" use-ack-all="false" ack-tag="" exp="{{{row["trigger"]}}}" message-tag="" message-handshake-exp="" message-notification-tag="" remote-ack-exp="{ack}" remote-ack-handshake-tag="" label="" handshake-tag=""/>\n'
 
         messages_str += f'    <message id="{row["messageID"]}" trigger-value="1" identifier="1" trigger="#{row["triggerID"]}" backcolor="#800000" forecolor="#FFFFFF" audio="false" display="true" print="false" message-to-tag="false" text="{row["message"]}"/>\n'
